@@ -12,3 +12,6 @@ Just add this HTML-Snippet in your code and wrap it into any kind of container t
 ```html
 <div class="ios-calculator"></div>
 ```
+
+# Example
+![Example Image](ios-calc-example.png)
