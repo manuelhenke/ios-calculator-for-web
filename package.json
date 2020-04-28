@@ -1,0 +1,36 @@
+{
+  "name": "ios-calculator-for-web",
+  "version": "1.0.0",
+  "description": "This is a calculator for the web following the design of the iOS-Calculator.",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelhenke/ios-calculator-for-web.git"
+  },
+  "keywords": [
+    "calculator",
+    "javascript"
+  ],
+  "author": "Manuel Henke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manuelhenke/ios-calculator-for-web/issues"
+  },
+  "homepage": "https://github.com/manuelhenke/ios-calculator-for-web#readme",
+  "dependencies": {
+    "jquery": "^3.5.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
