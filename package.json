@@ -1,6 +1,6 @@
 {
   "name": "ios-calculator-for-web",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "This is a calculator for the web following the design of the iOS-Calculator.",
   "main": "src/main.js",
   "scripts": {
