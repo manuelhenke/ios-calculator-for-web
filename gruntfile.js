@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         watch: {
             sccsChange: {
                 files: [
-                    'src/scss/**/*.scss'
+                    'src/**/*.scss'
                 ],
                 tasks: [
                     'clean:css',
@@ -73,8 +73,7 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'clean:js',
-                    'concat:all',
-                    //'uglify:verona'
+                    'concat:all'
                 ],
                 options: {
                     spawn: false
