@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/iOSCalculator.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "iOSCalculator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#CHARACTERS",
+              "privacy": "private",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{\n    PLUS: \"+\",\n    MINUS: \"-\",\n    MULTIPLY: \"*\",\n    DIVIDE: \"/\",\n    EQUALS: \"=\",\n    NEGATIVE: \"-\",\n    COMMA: \",\",\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "#currentExpression",
+              "privacy": "private",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "#currentInput",
+              "privacy": "private",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "#suggestedInput",
+              "privacy": "private",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "#lastOperand",
+              "privacy": "private",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "#calcSolution",
+              "privacy": "private",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#resetButton",
+              "privacy": "private",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#plusMinusButton",
+              "privacy": "private",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#percentageButton",
+              "privacy": "private",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#operandButtons",
+              "privacy": "private",
+              "type": {
+                "text": "HTMLElement[]"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#digitButtons",
+              "privacy": "private",
+              "type": {
+                "text": "HTMLElement[]"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#onResetClick"
+            },
+            {
+              "kind": "method",
+              "name": "#onPlusMinusClick"
+            },
+            {
+              "kind": "method",
+              "name": "#onPercentageClick"
+            },
+            {
+              "kind": "method",
+              "name": "#onDigitClick",
+              "parameters": [
+                {
+                  "name": "digitButton",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ],
+              "return": {
+                "type": {
+                  "text": ""
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#onOperandClick",
+              "parameters": [
+                {
+                  "name": "operandButton",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#addActiveState",
+              "parameters": [
+                {
+                  "name": "elem",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#removeActiveState",
+              "parameters": [
+                {
+                  "name": "elem",
+                  "type": {
+                    "text": "HTMLElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#endsWithOperand",
+              "parameters": [
+                {
+                  "name": "str",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "return": {
+                "type": {
+                  "text": ""
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#getCurrentSolution"
+            },
+            {
+              "kind": "method",
+              "name": "#displaySolution"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "ios-calculator",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "iOSCalculator",
+          "declaration": {
+            "name": "iOSCalculator",
+            "module": "src/iOSCalculator.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "ios-calculator",
+          "declaration": {
+            "name": "iOSCalculator",
+            "module": "src/iOSCalculator.js"
+          }
+        }
+      ]
+    }
+  ]
+}
