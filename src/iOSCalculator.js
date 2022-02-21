@@ -133,7 +133,6 @@ export class iOSCalculator extends HTMLElement {
    */
   #onDigitClick(digitButton) {
     const clickedDigit = digitButton.dataset.digit || "";
-    console.debug("-> clickedDigit:", clickedDigit);
 
     if (
       clickedDigit === iOSCalculator.#CHARACTERS.NEGATIVE &&
@@ -172,7 +171,6 @@ export class iOSCalculator extends HTMLElement {
     this.#operandButtons.forEach(this.#removeActiveState);
 
     const clickedOperand = operandButton.dataset.operand;
-    console.debug("-> clickedOperand:", clickedOperand);
 
     if (this.#currentInput) {
       this.#currentExpression += this.#currentInput;
@@ -256,7 +254,6 @@ export class iOSCalculator extends HTMLElement {
     expressionToEvaluate = expressionToEvaluate.replace(/,/g, ".");
 
     try {
-      console.debug("expressionToEvaluate:", expressionToEvaluate);
       return evaluate(expressionToEvaluate).toString();
     } catch (err) {
       console.error(err);
@@ -265,18 +262,12 @@ export class iOSCalculator extends HTMLElement {
   }
 
   #displaySolution() {
-    console.debug("currentExpression:", this.#currentExpression);
-    console.debug("currentInput:", this.#currentInput);
-
     let integerToDisplay;
 
     if (this.#currentInput.length > 0) {
-      console.debug("Display input!");
       this.#operandButtons.forEach(this.#removeActiveState);
       integerToDisplay = this.#currentInput;
     } else if (this.#currentExpression.length > 0) {
-      console.debug("Display expression!");
-
       let expressionToDisplay = this.#currentExpression || "0";
 
       if (!this.#endsWithOperand(expressionToDisplay)) {
@@ -290,12 +281,7 @@ export class iOSCalculator extends HTMLElement {
 
     integerToDisplay = integerToDisplay.replace(".", iOSCalculator.#CHARACTERS.COMMA);
 
-    console.debug("integerToDisplay:", integerToDisplay);
     this.#calcSolution.textContent = integerToDisplay;
-    this.shadowRoot.getElementById("expression").textContent = "Expression: " + this.#currentExpression;
-    this.shadowRoot.getElementById("input").textContent = "Input: " + this.#currentInput;
-
-    console.debug("==============================");
   }
 
   /**
