@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="dist/style.css">
+    
     <style>
-        body,
-        html {
-            background-color: white;
-            color: black;
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        .calc-container {
-            width: 100%;
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-        }
+      body,
+      html {
+        background-color: lightgray;
+        color: black;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="calc-container">
-        <div class="ios-calculator"></div>
-    </div>
-
-    <script src="dist/ios-calculator-for-web.js"></script>
-</body>
-
+  <body>
+    <ios-calculator></ios-calculator>
+  </body>
 </html>
