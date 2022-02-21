@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/manuelhenke/ios-calculator-for-web/issues"
   },
-  "homepage": "https://github.com/manuelhenke/ios-calculator-for-web#readme",
+  "homepage": "https://henkebyte.com/ios-calculator",
   "sideEffects": [
     "./dist/*.js",
     "./src/**/*.{ts,tsx,js}"
