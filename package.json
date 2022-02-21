@@ -3,6 +3,9 @@
   "version": "1.1.1",
   "description": "This is a calculator for the web following the design of the iOS-Calculator.",
   "main": "dist/ios-calculator-for-web.js",
+  "module": "dist/ios-calculator-for-web.js",
+  "type": "module",
+  "customElements": "custom-elements.json",
   "scripts": {
     "test": "karma start",
     "build": "webpack --mode=production",
@@ -35,6 +38,7 @@
   "devDependencies": {
     "@types/jasmine": "^3.10.2",
     "css-loader": "^6.5.1",
+    "custom-elements-manifest": "^1.0.0",
     "html-loader": "^3.0.1",
     "html-webpack-plugin": "^5.5.0",
     "jasmine": "^3.10.0",
