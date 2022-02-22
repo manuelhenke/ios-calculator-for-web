@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+$buttonSize: 3rem;
+$buttonPadding: 0.5rem;
+$buttonsGap: 0.625rem;
+
 .calc {
   background-color: black;
   border-radius: 10px;
@@ -26,9 +30,11 @@
   .calc-solution {
     padding: 3rem 0.5rem 0.5rem 0.5rem;
     font-size: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
     text-align: right;
     text-overflow: ellipsis;
-    width: 100%;
+    width: calc($buttonsGap * 3 + calc($buttonSize + $buttonPadding * 2) * 4);
   }
 
   .calc-buttons-container {
@@ -36,11 +42,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 0.625rem;
+    gap: $buttonsGap;
     font-size: 2rem;
 
     .calc-button {
-      padding: 0.5rem;
+      padding: $buttonPadding;
       border-radius: 100%;
       cursor: pointer;
       opacity: 0.9;
@@ -50,9 +56,9 @@
         place-items: center;
         place-content: center;
         text-align: center;
-        height: 3rem;
-        width: 3rem;
-        line-height: 3rem;
+        height: $buttonSize;
+        width: $buttonSize;
+        line-height: $buttonSize;
       }
 
       &:hover {
