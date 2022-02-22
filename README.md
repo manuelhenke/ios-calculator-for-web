@@ -19,4 +19,5 @@ Just add this HTML-Snippet in your code and wrap it into any kind of container.
 ```
 
 # Example
+Can also take a look at the [demo.html](demo.html) to get an interactive example.
 ![Example Image](ios-calc-example.png)
