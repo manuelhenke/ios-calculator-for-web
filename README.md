@@ -2,16 +2,20 @@
 This is a calculator for the web following the design of the iOS-Calculator.
 
 # Getting Started
-All you have to do is deliver everything in the dist/ folder to the user. Either by installing the npm package in your project or by cloning this repo into your project.
+Install the package via `npm` or `yarn` and deliver the script to the user.
+This can be done via `import`, `require` or just inserting a `script` tag.
 
 ```shell
 npm i ios-calculator-for-web
+```
+```shell
+yarn add ios-calculator-for-web
 ```
 
 # Usage
 Just add this HTML-Snippet in your code and wrap it into any kind of container.
 ```html
-<div class="ios-calculator"></div>
+<ios-calculator></ios-calculator>
 ```
 
 # Example
