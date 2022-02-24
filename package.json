@@ -48,7 +48,8 @@
     ]
   },
   "browserslist": [
-    "last 3 versions",
+    "last 2 years",
+    "> 1%",
     "not dead"
   ],
   "prettier": {
@@ -87,6 +88,8 @@
     "prettier": "^2.5.1",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard": "^25.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
@@ -94,7 +97,11 @@
   "customElements": "custom-elements.json",
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "stylelint": {}
     }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
   }
 }
