@@ -40,6 +40,17 @@
       "prettier --write"
     ]
   },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
+  "browserslist": [
+    "last 3 versions",
+    "not dead"
+  ],
   "prettier": {
     "arrowParens": "avoid",
     "singleQuote": true
@@ -54,10 +65,14 @@
     "mathjs": "^10.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "@custom-elements-manifest/analyzer": "^0.5.7",
     "@open-wc/eslint-config": "^7.0.0",
     "@open-wc/testing": "^3.0.4",
     "@web/test-runner": "0.13.27",
+    "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.4.0",
@@ -72,8 +87,14 @@
     "prettier": "^2.5.1",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
   },
-  "customElements": "custom-elements.json"
+  "customElements": "custom-elements.json",
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  }
 }
