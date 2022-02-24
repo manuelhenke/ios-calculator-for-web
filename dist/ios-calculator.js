@@ -1431,7 +1431,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-family:\"San Francisco\";font-weight:400;src:url(\"https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff\")}:host{display:inline-block}*,*::after,*::before{box-sizing:border-box}.calc{background-color:#000;border-radius:10px;display:inline-block;font-family:\"San Francisco\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Open Sans\",\"Helvetica Neue\",sans-serif;color:#fff;padding:1rem}.calc .calc-solution{padding:3rem .5rem .5rem .5rem;font-size:4rem;overflow:hidden;white-space:nowrap;text-align:right;text-overflow:ellipsis;width:17.875rem}.calc .calc-buttons-container{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(5, 1fr);gap:.625rem;font-size:2rem}.calc .calc-buttons-container .calc-button{padding:.5rem;border-radius:100%;cursor:pointer;opacity:.9}.calc .calc-buttons-container .calc-button>span{display:inline-flex;place-items:center;place-content:center;text-align:center;height:3rem;width:3rem;line-height:3rem}.calc .calc-buttons-container .calc-button:hover{opacity:1}.calc .calc-buttons-container .calc-button.calc-button-double{grid-column:span 2;border-radius:5rem;justify-content:start}.calc .calc-buttons-container .calc-button.calc-button-digit{background-color:#444}.calc .calc-buttons-container .calc-button.calc-button-operand{background-color:orange}.calc .calc-buttons-container .calc-button.calc-button-operand.active{opacity:1;background-color:#fff;color:orange}.calc .calc-buttons-container .calc-button.calc-button-func{background-color:#afafaf;color:#000}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-family:\"San Francisco\";font-weight:400;src:url(\"https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff\")}:host{display:inline-block}*,*::after,*::before{box-sizing:border-box}.calc{background-color:#000;border-radius:10px;display:inline-block;font-family:\"San Francisco\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Open Sans\",\"Helvetica Neue\",sans-serif;color:#fff;padding:1rem}.calc .calc-solution{padding:3rem .5rem .5rem .5rem;font-size:4rem;overflow:hidden;white-space:nowrap;text-align:right;text-overflow:ellipsis;width:17.875rem}.calc .calc-buttons-container{-webkit-user-select:none;user-select:none;display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(5, 1fr);gap:.625rem;font-size:2rem}.calc .calc-buttons-container .calc-button{padding:.5rem;border-radius:100%;cursor:pointer;opacity:.9;position:relative;transition-duration:.4s;overflow:hidden}.calc .calc-buttons-container .calc-button>span{display:inline-flex;place-items:center;place-content:center;text-align:center;height:3rem;width:3rem;line-height:3rem}.calc .calc-buttons-container .calc-button:hover{opacity:1}.calc .calc-buttons-container .calc-button:active:after{opacity:1;transition:0s}.calc .calc-buttons-container .calc-button:after{content:\"\";background:rgba(255,255,255,.25);display:block;position:absolute;inset:0;opacity:0;transition:all .8s}.calc .calc-buttons-container .calc-button.calc-button-double{grid-column:span 2;border-radius:5rem;justify-content:start}.calc .calc-buttons-container .calc-button.calc-button-digit{background-color:#444}.calc .calc-buttons-container .calc-button.calc-button-operand{background-color:orange}.calc .calc-buttons-container .calc-button.calc-button-operand.active{opacity:1;background-color:#fff;color:orange}.calc .calc-buttons-container .calc-button.calc-button-func{background-color:#afafaf;color:#000}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
@@ -67549,34 +67549,6 @@ _extends(classes, {
 Chain.createProxy(math);
 
 ;// CONCATENATED MODULE: ./src/iOSCalculator.js
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
-
-function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
 
 function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
@@ -67604,9 +67576,9 @@ function _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.
 
 
 
-var template = document.createElement("template");
+const template = document.createElement("template");
 template.innerHTML = ios_calculator;
-var sheet = document.createElement("style");
+const sheet = document.createElement("style");
 sheet.innerHTML = src_ios_calculator/* default.toString */.Z.toString();
 
 var _currentExpression = /*#__PURE__*/new WeakMap();
@@ -67649,173 +67621,147 @@ var _getCurrentSolution = /*#__PURE__*/new WeakSet();
 
 var _displaySolution = /*#__PURE__*/new WeakSet();
 
-var iOSCalculator = /*#__PURE__*/function (_HTMLElement) {
-  _inherits(iOSCalculator, _HTMLElement);
+class iOSCalculator extends HTMLElement {
+  // TODO: use these
 
-  var _super = _createSuper(iOSCalculator);
+  /** @type {HTMLElement} */
 
-  function iOSCalculator() {
-    var _this;
+  /** @type {HTMLElement} */
 
-    _classCallCheck(this, iOSCalculator);
+  /** @type {HTMLElement} */
 
-    _this = _super.call(this);
+  /** @type {HTMLElement} */
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _displaySolution);
+  /** @type {HTMLElement[]} */
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _getCurrentSolution);
+  /** @type {HTMLElement[]} */
+  static get observedAttributes() {
+    return [];
+  }
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _endsWithOperand);
+  constructor() {
+    super();
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _removeActiveState);
+    _classPrivateMethodInitSpec(this, _displaySolution);
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _addActiveState);
+    _classPrivateMethodInitSpec(this, _getCurrentSolution);
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _onOperandClick);
+    _classPrivateMethodInitSpec(this, _endsWithOperand);
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _onDigitClick);
+    _classPrivateMethodInitSpec(this, _removeActiveState);
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _onPercentageClick);
+    _classPrivateMethodInitSpec(this, _addActiveState);
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _onPlusMinusClick);
+    _classPrivateMethodInitSpec(this, _onOperandClick);
 
-    _classPrivateMethodInitSpec(_assertThisInitialized(_this), _onResetClick);
+    _classPrivateMethodInitSpec(this, _onDigitClick);
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _currentExpression, {
+    _classPrivateMethodInitSpec(this, _onPercentageClick);
+
+    _classPrivateMethodInitSpec(this, _onPlusMinusClick);
+
+    _classPrivateMethodInitSpec(this, _onResetClick);
+
+    _classPrivateFieldInitSpec(this, _currentExpression, {
       writable: true,
       value: ""
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _currentInput, {
+    _classPrivateFieldInitSpec(this, _currentInput, {
       writable: true,
       value: ""
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _suggestedInput, {
+    _classPrivateFieldInitSpec(this, _suggestedInput, {
       writable: true,
       value: ""
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _lastOperand, {
+    _classPrivateFieldInitSpec(this, _lastOperand, {
       writable: true,
       value: ""
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _calcSolution, {
+    _classPrivateFieldInitSpec(this, _calcSolution, {
       writable: true,
       value: void 0
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _resetButton, {
+    _classPrivateFieldInitSpec(this, _resetButton, {
       writable: true,
       value: void 0
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _plusMinusButton, {
+    _classPrivateFieldInitSpec(this, _plusMinusButton, {
       writable: true,
       value: void 0
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _percentageButton, {
+    _classPrivateFieldInitSpec(this, _percentageButton, {
       writable: true,
       value: void 0
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _operandButtons, {
+    _classPrivateFieldInitSpec(this, _operandButtons, {
       writable: true,
       value: void 0
     });
 
-    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _digitButtons, {
+    _classPrivateFieldInitSpec(this, _digitButtons, {
       writable: true,
       value: void 0
     });
 
-    var shadowRoot = _this.attachShadow({
+    const shadowRoot = this.attachShadow({
       mode: "open"
     });
-
     shadowRoot.appendChild(sheet.cloneNode(true));
     shadowRoot.appendChild(template.content.cloneNode(true));
 
-    _classPrivateFieldSet(_assertThisInitialized(_this), _calcSolution, shadowRoot.querySelector(".calc-solution"));
+    _classPrivateFieldSet(this, _calcSolution, shadowRoot.querySelector(".calc-solution"));
 
-    _classPrivateFieldSet(_assertThisInitialized(_this), _resetButton, shadowRoot.getElementById("reset"));
+    _classPrivateFieldSet(this, _resetButton, shadowRoot.getElementById("reset"));
 
-    _classPrivateFieldSet(_assertThisInitialized(_this), _plusMinusButton, shadowRoot.getElementById("plus-minus"));
+    _classPrivateFieldSet(this, _plusMinusButton, shadowRoot.getElementById("plus-minus"));
 
-    _classPrivateFieldSet(_assertThisInitialized(_this), _percentageButton, shadowRoot.getElementById("percentage"));
+    _classPrivateFieldSet(this, _percentageButton, shadowRoot.getElementById("percentage"));
 
-    _classPrivateFieldSet(_assertThisInitialized(_this), _operandButtons, Array.from(shadowRoot.querySelectorAll(".calc-button-operand")));
+    _classPrivateFieldSet(this, _operandButtons, Array.from(shadowRoot.querySelectorAll(".calc-button-operand")));
 
-    _classPrivateFieldSet(_assertThisInitialized(_this), _digitButtons, Array.from(shadowRoot.querySelectorAll(".calc-button-digit")));
+    _classPrivateFieldSet(this, _digitButtons, Array.from(shadowRoot.querySelectorAll(".calc-button-digit")));
 
-    _classPrivateFieldGet(_assertThisInitialized(_this), _resetButton).addEventListener("click", _classPrivateMethodGet(_assertThisInitialized(_this), _onResetClick, _onResetClick2).bind(_assertThisInitialized(_this)));
+    _classPrivateFieldGet(this, _resetButton).addEventListener("click", _classPrivateMethodGet(this, _onResetClick, _onResetClick2).bind(this));
 
-    _classPrivateFieldGet(_assertThisInitialized(_this), _plusMinusButton).addEventListener("click", _classPrivateMethodGet(_assertThisInitialized(_this), _onPlusMinusClick, _onPlusMinusClick2).bind(_assertThisInitialized(_this)));
+    _classPrivateFieldGet(this, _plusMinusButton).addEventListener("click", _classPrivateMethodGet(this, _onPlusMinusClick, _onPlusMinusClick2).bind(this));
 
-    _classPrivateFieldGet(_assertThisInitialized(_this), _percentageButton).addEventListener("click", _classPrivateMethodGet(_assertThisInitialized(_this), _onPercentageClick, _onPercentageClick2).bind(_assertThisInitialized(_this)));
+    _classPrivateFieldGet(this, _percentageButton).addEventListener("click", _classPrivateMethodGet(this, _onPercentageClick, _onPercentageClick2).bind(this));
 
-    _classPrivateFieldGet(_assertThisInitialized(_this), _operandButtons).forEach(function (operandButton) {
-      return operandButton.addEventListener("click", function () {
-        return _classPrivateMethodGet(_assertThisInitialized(_this), _onOperandClick, _onOperandClick2).call(_assertThisInitialized(_this), operandButton);
-      });
-    });
+    _classPrivateFieldGet(this, _operandButtons).forEach(operandButton => operandButton.addEventListener("click", () => _classPrivateMethodGet(this, _onOperandClick, _onOperandClick2).call(this, operandButton)));
 
-    _classPrivateFieldGet(_assertThisInitialized(_this), _digitButtons).forEach(function (digitButton) {
-      return digitButton.addEventListener("click", function () {
-        return _classPrivateMethodGet(_assertThisInitialized(_this), _onDigitClick, _onDigitClick2).call(_assertThisInitialized(_this), digitButton);
-      });
-    });
-
-    return _this;
+    _classPrivateFieldGet(this, _digitButtons).forEach(digitButton => digitButton.addEventListener("click", () => _classPrivateMethodGet(this, _onDigitClick, _onDigitClick2).call(this, digitButton)));
   }
 
-  _createClass(iOSCalculator, [{
-    key: "connectedCallback",
-    value: function connectedCallback() {
-      if (this.shadowRoot) {
-        _classPrivateMethodGet(this, _displaySolution, _displaySolution2).call(this);
-      }
+  connectedCallback() {
+    if (this.shadowRoot) {
+      _classPrivateMethodGet(this, _displaySolution, _displaySolution2).call(this);
     }
-  }, {
-    key: "attributeChangedCallback",
-    value:
-    /**
-     * @param {string} name 
-     * @param {string} oldValue 
-     * @param {string} newValue 
-     */
-    function attributeChangedCallback(name, oldValue, newValue) {
-      if (newValue != oldValue) {
-        switch (name) {}
-      }
+  }
+
+  /**
+   * @param {string} name 
+   * @param {string} oldValue 
+   * @param {string} newValue 
+   */
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (newValue != oldValue) {
+      switch (name) {}
     }
-  }], [{
-    key: "observedAttributes",
-    get: // TODO: use these
+  }
 
-    /** @type {HTMLElement} */
-
-    /** @type {HTMLElement} */
-
-    /** @type {HTMLElement} */
-
-    /** @type {HTMLElement} */
-
-    /** @type {HTMLElement[]} */
-
-    /** @type {HTMLElement[]} */
-    function get() {
-      return [];
-    }
-  }]);
-
-  return iOSCalculator;
-}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+}
 
 function _onResetClick2() {
-  var textSpan = _classPrivateFieldGet(this, _resetButton).querySelector("span");
+  const textSpan = _classPrivateFieldGet(this, _resetButton).querySelector("span");
 
   if (textSpan.textContent === "AC") {
     // AC
@@ -67835,7 +67781,7 @@ function _onResetClick2() {
 }
 
 function _onPlusMinusClick2() {
-  var number = "0";
+  let number = "0";
 
   if (_classPrivateFieldGet(this, _currentInput).length > 0) {
     number = _classPrivateFieldGet(this, _currentInput);
@@ -67853,7 +67799,7 @@ function _onPlusMinusClick2() {
 }
 
 function _onPercentageClick2() {
-  var number = "0";
+  let number = "0";
 
   if (_classPrivateFieldGet(this, _currentInput).length > 0) {
     number = _classPrivateFieldGet(this, _currentInput);
@@ -67861,7 +67807,7 @@ function _onPercentageClick2() {
     number = _classPrivateMethodGet(this, _getCurrentSolution, _getCurrentSolution2).call(this);
   }
 
-  var intermediateInput = number.replace(/,/g, ".");
+  let intermediateInput = number.replace(/,/g, ".");
   intermediateInput += "/100";
 
   _classPrivateFieldSet(this, _currentInput, String(evaluate(intermediateInput)));
@@ -67872,7 +67818,7 @@ function _onPercentageClick2() {
 }
 
 function _onDigitClick2(digitButton) {
-  var clickedDigit = digitButton.dataset.digit || "";
+  const clickedDigit = digitButton.dataset.digit || "";
 
   if (clickedDigit === _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE && _classPrivateFieldGet(this, _currentInput).includes(_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE)) {
     // prevent clicking multiple times -> ,
@@ -67891,7 +67837,7 @@ function _onDigitClick2(digitButton) {
     _classPrivateFieldSet(this, _currentInput, "0" + _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA);
   } else if (_classPrivateFieldGet(this, _currentInput) === "0" && clickedDigit !== _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA) {
     _classPrivateFieldSet(this, _currentInput, clickedDigit);
-  } else if (_classPrivateFieldGet(this, _currentInput) === "".concat(_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE, "0") && clickedDigit !== _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA) {
+  } else if (_classPrivateFieldGet(this, _currentInput) === `${_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE}0` && clickedDigit !== _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA) {
     _classPrivateFieldSet(this, _currentInput, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE + clickedDigit);
   } else {
     _classPrivateFieldSet(this, _currentInput, _classPrivateFieldGet(this, _currentInput) + clickedDigit);
@@ -67903,7 +67849,7 @@ function _onDigitClick2(digitButton) {
 function _onOperandClick2(operandButton) {
   _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));
 
-  var clickedOperand = operandButton.dataset.operand;
+  const clickedOperand = operandButton.dataset.operand;
 
   if (_classPrivateFieldGet(this, _currentInput)) {
     _classPrivateFieldSet(this, _currentExpression, _classPrivateFieldGet(this, _currentExpression) + _classPrivateFieldGet(this, _currentInput));
@@ -67926,9 +67872,9 @@ function _onOperandClick2(operandButton) {
   } else {
     if (_classPrivateFieldGet(this, _currentExpression).endsWith(")")) {
       // clicking = multiple times in a row
-      var latestOperandIndex = -1;
+      let latestOperandIndex = -1;
 
-      for (var index = _classPrivateFieldGet(this, _currentExpression).length - 1; index > 0; index--) {
+      for (let index = _classPrivateFieldGet(this, _currentExpression).length - 1; index > 0; index--) {
         if (_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, _classPrivateFieldGet(this, _currentExpression)[index])) {
           latestOperandIndex = index;
           break;
@@ -67940,7 +67886,7 @@ function _onOperandClick2(operandButton) {
       }
     }
 
-    _classPrivateFieldSet(this, _currentExpression, "(".concat(_classPrivateFieldGet(this, _currentExpression), ")"));
+    _classPrivateFieldSet(this, _currentExpression, `(${_classPrivateFieldGet(this, _currentExpression)})`);
   }
 
   _classPrivateFieldSet(this, _currentInput, "");
@@ -67957,12 +67903,12 @@ function _removeActiveState2(elem) {
 }
 
 function _endsWithOperand2(str) {
-  var lastChar = str.slice(-1);
+  const lastChar = str.slice(-1);
   return [_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).PLUS, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).MINUS, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).DIVIDE, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).MULTIPLY].includes(lastChar);
 }
 
 function _getCurrentSolution2() {
-  var expressionToEvaluate = _classPrivateFieldGet(this, _currentExpression) || "0";
+  let expressionToEvaluate = _classPrivateFieldGet(this, _currentExpression) || "0";
 
   if (_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, expressionToEvaluate)) {
     expressionToEvaluate = expressionToEvaluate.slice(0, -1);
@@ -67979,14 +67925,14 @@ function _getCurrentSolution2() {
 }
 
 function _displaySolution2() {
-  var integerToDisplay;
+  let integerToDisplay;
 
   if (_classPrivateFieldGet(this, _currentInput).length > 0) {
     _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));
 
     integerToDisplay = _classPrivateFieldGet(this, _currentInput);
   } else if (_classPrivateFieldGet(this, _currentExpression).length > 0) {
-    var expressionToDisplay = _classPrivateFieldGet(this, _currentExpression) || "0";
+    let expressionToDisplay = _classPrivateFieldGet(this, _currentExpression) || "0";
 
     if (!_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, expressionToDisplay)) {
       _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));

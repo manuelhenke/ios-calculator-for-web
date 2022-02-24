@@ -51,6 +51,10 @@ $buttonsGap: 0.625rem;
       cursor: pointer;
       opacity: 0.9;
 
+      position: relative;
+      transition-duration: 0.4s;
+      overflow: hidden;
+
       > span {
         display: inline-flex;
         place-items: center;
@@ -63,6 +67,21 @@ $buttonsGap: 0.625rem;
 
       &:hover {
         opacity: 1;
+      }
+
+      &:active:after {
+        opacity: 1;
+        transition: 0s
+      }
+
+      &:after {
+        content: "";
+        background: rgba(255, 255, 255, 0.25);
+        display: block;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: all 0.8s
       }
 
       &.calc-button-double {
