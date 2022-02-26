@@ -1,30 +1,30 @@
-import html from "./ios-calculator.html";
-import shadowCss from "./ios-calculator.scss";
-import { evaluate } from "mathjs";
+import html from './ios-calculator.html';
+import shadowCss from './ios-calculator.scss';
+import { evaluate } from 'mathjs';
 
-const template = document.createElement("template");
+const template = document.createElement('template');
 template.innerHTML = html;
 
-const sheet = document.createElement("style");
+const sheet = document.createElement('style');
 sheet.innerHTML = shadowCss.toString();
 
 export class iOSCalculator extends HTMLElement {
   static #CHARACTERS = {
-    PLUS: "+",
-    MINUS: "-",
-    MULTIPLY: "*",
-    DIVIDE: "/",
-    EQUALS: "=",
-    NEGATIVE: "-",
-    COMMA: ",",
+    PLUS: '+',
+    MINUS: '-',
+    MULTIPLY: '*',
+    DIVIDE: '/',
+    EQUALS: '=',
+    NEGATIVE: '-',
+    COMMA: ',',
   };
 
-  #currentExpression = "";
-  #currentInput = "";
+  #currentExpression = '';
+  #currentInput = '';
 
   // TODO: use these
-  #suggestedInput = "";
-  #lastOperand = "";
+  #suggestedInput = '';
+  #lastOperand = '';
 
   /** @type {HTMLElement} */
   #calcSolution;
@@ -45,27 +45,41 @@ export class iOSCalculator extends HTMLElement {
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.appendChild(sheet.cloneNode(true));
     shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.#calcSolution = shadowRoot.querySelector(".calc-solution");
+    this.#calcSolution = shadowRoot.querySelector('.calc-solution');
 
-    this.#resetButton = shadowRoot.getElementById("reset");
-    this.#plusMinusButton = shadowRoot.getElementById("plus-minus");
-    this.#percentageButton = shadowRoot.getElementById("percentage");
+    this.#resetButton = shadowRoot.getElementById('reset');
+    this.#plusMinusButton = shadowRoot.getElementById('plus-minus');
+    this.#percentageButton = shadowRoot.getElementById('percentage');
 
-    this.#operandButtons = Array.from(shadowRoot.querySelectorAll(".calc-button-operand"));
-    this.#digitButtons = Array.from(shadowRoot.querySelectorAll(".calc-button-digit"));
-
-    this.#resetButton.addEventListener("click", this.#onResetClick.bind(this));
-    this.#plusMinusButton.addEventListener("click", this.#onPlusMinusClick.bind(this));
-    this.#percentageButton.addEventListener("click", this.#onPercentageClick.bind(this));
-    this.#operandButtons.forEach((operandButton) =>
-      operandButton.addEventListener("click", () => this.#onOperandClick(operandButton))
+    this.#operandButtons = Array.from(
+      shadowRoot.querySelectorAll('.calc-button-operand')
     );
-    this.#digitButtons.forEach((digitButton) =>
-      digitButton.addEventListener("click", () => this.#onDigitClick(digitButton))
+    this.#digitButtons = Array.from(
+      shadowRoot.querySelectorAll('.calc-button-digit')
+    );
+
+    this.#resetButton.addEventListener('click', this.#onResetClick.bind(this));
+    this.#plusMinusButton.addEventListener(
+      'click',
+      this.#onPlusMinusClick.bind(this)
+    );
+    this.#percentageButton.addEventListener(
+      'click',
+      this.#onPercentageClick.bind(this)
+    );
+    this.#operandButtons.forEach(operandButton =>
+      operandButton.addEventListener('click', event =>
+        this.#onOperandClick(event, operandButton)
+      )
+    );
+    this.#digitButtons.forEach(digitButton =>
+      digitButton.addEventListener('click', event =>
+        this.#onDigitClick(event, digitButton)
+      )
     );
   }
 
@@ -75,25 +89,33 @@ export class iOSCalculator extends HTMLElement {
     }
   }
 
-  #onResetClick() {
-    const textSpan = this.#resetButton.querySelector("span");
+  /**
+   * @param {PointerEvent} event
+   */
+  #onResetClick(event) {
+    event.preventDefault();
+    const textSpan = this.#resetButton.querySelector('span');
 
-    if (textSpan.textContent === "AC") {
+    if (textSpan.textContent === 'AC') {
       // AC
-      this.#currentInput = "";
-      this.#currentExpression = "";
+      this.#currentInput = '';
+      this.#currentExpression = '';
       this.#operandButtons.forEach(this.#removeActiveState);
     } else {
       // C
-      this.#currentInput = "0";
-      textSpan.textContent = "AC";
+      this.#currentInput = '0';
+      textSpan.textContent = 'AC';
     }
 
     this.#displaySolution();
   }
 
-  #onPlusMinusClick() {
-    let number = "0";
+  /**
+   * @param {PointerEvent} event
+   */
+  #onPlusMinusClick(event) {
+    event.preventDefault();
+    let number = '0';
 
     if (this.#currentInput.length > 0) {
       number = this.#currentInput;
@@ -110,8 +132,12 @@ export class iOSCalculator extends HTMLElement {
     this.#displaySolution();
   }
 
-  #onPercentageClick() {
-    let number = "0";
+  /**
+   * @param {PointerEvent} event
+   */
+  #onPercentageClick(event) {
+    event.preventDefault();
+    let number = '0';
 
     if (this.#currentInput.length > 0) {
       number = this.#currentInput;
@@ -119,20 +145,24 @@ export class iOSCalculator extends HTMLElement {
       number = this.#getCurrentSolution();
     }
 
-    let intermediateInput = number.replace(/,/g, ".");
-    intermediateInput += "/100";
+    let intermediateInput = number.replace(/,/g, '.');
+    intermediateInput += '/100';
     this.#currentInput = String(evaluate(intermediateInput));
-    this.#currentInput = this.#currentInput.replace(".", iOSCalculator.#CHARACTERS.COMMA);
+    this.#currentInput = this.#currentInput.replace(
+      '.',
+      iOSCalculator.#CHARACTERS.COMMA
+    );
     this.#displaySolution();
   }
 
   /**
-   * 
-   * @param {HTMLElement} digitButton 
-   * @returns 
+   * @param {PointerEvent} event
+   * @param {HTMLElement} digitButton
+   * @returns
    */
-  #onDigitClick(digitButton) {
-    const clickedDigit = digitButton.dataset.digit || "";
+  #onDigitClick(event, digitButton) {
+    event.preventDefault();
+    const clickedDigit = digitButton.dataset.digit || '';
 
     if (
       clickedDigit === iOSCalculator.#CHARACTERS.NEGATIVE &&
@@ -145,16 +175,25 @@ export class iOSCalculator extends HTMLElement {
     if (!this.#endsWithOperand(this.#currentExpression)) {
       // reset expression if user starts a new calculations
       // -> clicking a number with clicking an operand beforehand
-      this.#currentExpression = "";
+      this.#currentExpression = '';
     }
 
-    this.#resetButton.querySelector("span").textContent = "C";
-    
-    if (this.#currentInput === "" && clickedDigit === iOSCalculator.#CHARACTERS.COMMA) {
-      this.#currentInput = "0" + iOSCalculator.#CHARACTERS.COMMA;
-    } else if (this.#currentInput === "0" && clickedDigit !== iOSCalculator.#CHARACTERS.COMMA) {
+    this.#resetButton.querySelector('span').textContent = 'C';
+
+    if (
+      this.#currentInput === '' &&
+      clickedDigit === iOSCalculator.#CHARACTERS.COMMA
+    ) {
+      this.#currentInput = '0' + iOSCalculator.#CHARACTERS.COMMA;
+    } else if (
+      this.#currentInput === '0' &&
+      clickedDigit !== iOSCalculator.#CHARACTERS.COMMA
+    ) {
       this.#currentInput = clickedDigit;
-    } else if (this.#currentInput === `${iOSCalculator.#CHARACTERS.NEGATIVE}0` && clickedDigit !== iOSCalculator.#CHARACTERS.COMMA) {
+    } else if (
+      this.#currentInput === `${iOSCalculator.#CHARACTERS.NEGATIVE}0` &&
+      clickedDigit !== iOSCalculator.#CHARACTERS.COMMA
+    ) {
       this.#currentInput = iOSCalculator.#CHARACTERS.NEGATIVE + clickedDigit;
     } else {
       this.#currentInput += clickedDigit;
@@ -164,10 +203,11 @@ export class iOSCalculator extends HTMLElement {
   }
 
   /**
-   * 
-   * @param {HTMLElement} operandButton 
+   * @param {PointerEvent} event
+   * @param {HTMLElement} operandButton
    */
-  #onOperandClick(operandButton) {
+  #onOperandClick(event, operandButton) {
+    event.preventDefault();
     this.#operandButtons.forEach(this.#removeActiveState);
 
     const clickedOperand = operandButton.dataset.operand;
@@ -178,7 +218,7 @@ export class iOSCalculator extends HTMLElement {
 
     if (this.#currentExpression.length === 0) {
       // in case user starts his calculation directly with an operand
-      this.#currentExpression = "0";
+      this.#currentExpression = '0';
     }
 
     if (this.#endsWithOperand(this.#currentExpression)) {
@@ -190,10 +230,14 @@ export class iOSCalculator extends HTMLElement {
       this.#currentExpression += clickedOperand;
       this.#addActiveState(operandButton);
     } else {
-      if (this.#currentExpression.endsWith(")")) {
+      if (this.#currentExpression.endsWith(')')) {
         // clicking = multiple times in a row
         let latestOperandIndex = -1;
-        for (let index = this.#currentExpression.length - 1; index > 0; index--) {
+        for (
+          let index = this.#currentExpression.length - 1;
+          index > 0;
+          index--
+        ) {
           if (this.#endsWithOperand(this.#currentExpression[index])) {
             latestOperandIndex = index;
             break;
@@ -201,38 +245,41 @@ export class iOSCalculator extends HTMLElement {
         }
 
         if (latestOperandIndex !== -1) {
-          this.#currentExpression += this.#currentExpression.slice(latestOperandIndex, -1);
+          this.#currentExpression += this.#currentExpression.slice(
+            latestOperandIndex,
+            -1
+          );
         }
       }
 
       this.#currentExpression = `(${this.#currentExpression})`;
     }
 
-    this.#currentInput = "";
+    this.#currentInput = '';
 
     this.#displaySolution();
   }
 
   /**
-   * 
-   * @param {HTMLElement} elem 
+   *
+   * @param {HTMLElement} elem
    */
   #addActiveState(elem) {
-    elem.classList.add("active");
+    elem.classList.add('active');
   }
 
   /**
-   * 
-   * @param {HTMLElement} elem 
+   *
+   * @param {HTMLElement} elem
    */
   #removeActiveState(elem) {
-    elem.classList.remove("active");
+    elem.classList.remove('active');
   }
 
   /**
-   * 
-   * @param {string} str 
-   * @returns 
+   *
+   * @param {string} str
+   * @returns
    */
   #endsWithOperand(str) {
     const lastChar = str.slice(-1);
@@ -245,19 +292,19 @@ export class iOSCalculator extends HTMLElement {
   }
 
   #getCurrentSolution() {
-    let expressionToEvaluate = this.#currentExpression || "0";
+    let expressionToEvaluate = this.#currentExpression || '0';
 
     if (this.#endsWithOperand(expressionToEvaluate)) {
       expressionToEvaluate = expressionToEvaluate.slice(0, -1);
     }
 
-    expressionToEvaluate = expressionToEvaluate.replace(/,/g, ".");
+    expressionToEvaluate = expressionToEvaluate.replace(/,/g, '.');
 
     try {
       return evaluate(expressionToEvaluate).toString();
     } catch (err) {
       console.error(err);
-      return "Error";
+      return 'Error';
     }
   }
 
@@ -268,7 +315,7 @@ export class iOSCalculator extends HTMLElement {
       this.#operandButtons.forEach(this.#removeActiveState);
       integerToDisplay = this.#currentInput;
     } else if (this.#currentExpression.length > 0) {
-      let expressionToDisplay = this.#currentExpression || "0";
+      let expressionToDisplay = this.#currentExpression || '0';
 
       if (!this.#endsWithOperand(expressionToDisplay)) {
         this.#operandButtons.forEach(this.#removeActiveState);
@@ -276,18 +323,21 @@ export class iOSCalculator extends HTMLElement {
 
       integerToDisplay = this.#getCurrentSolution();
     } else {
-      integerToDisplay = "0";
+      integerToDisplay = '0';
     }
 
-    integerToDisplay = integerToDisplay.replace(".", iOSCalculator.#CHARACTERS.COMMA);
+    integerToDisplay = integerToDisplay.replace(
+      '.',
+      iOSCalculator.#CHARACTERS.COMMA
+    );
 
     this.#calcSolution.textContent = integerToDisplay;
   }
 
   /**
-   * @param {string} name 
-   * @param {string} oldValue 
-   * @param {string} newValue 
+   * @param {string} name
+   * @param {string} oldValue
+   * @param {string} newValue
    */
   attributeChangedCallback(name, oldValue, newValue) {
     if (newValue != oldValue) {

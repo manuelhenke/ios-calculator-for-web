@@ -71,17 +71,18 @@ $buttonsGap: 0.625rem;
 
       &:active:after {
         opacity: 1;
-        transition: 0s
+        transition: 0s;
       }
 
       &:after {
-        content: "";
+        content: '';
         background: rgba(255, 255, 255, 0.25);
         display: block;
         position: absolute;
         inset: 0;
         opacity: 0;
-        transition: all 0.8s
+        transition: all 0.8s;
+        border-radius: inherit;
       }
 
       &.calc-button-double {
