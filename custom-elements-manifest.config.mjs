@@ -19,4 +19,4 @@ export default {
   stencil: false,
   /** Provide custom plugins */
   plugins: [],
-}
+};

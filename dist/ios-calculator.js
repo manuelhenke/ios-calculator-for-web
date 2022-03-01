@@ -1431,7 +1431,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-family:\"San Francisco\";font-weight:400;src:url(\"https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff\")}:host{display:inline-block}*,*::after,*::before{box-sizing:border-box}.calc{background-color:#000;border-radius:10px;display:inline-block;font-family:\"San Francisco\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Open Sans\",\"Helvetica Neue\",sans-serif;color:#fff;padding:1rem}.calc .calc-solution{padding:3rem .5rem .5rem .5rem;font-size:4rem;overflow:hidden;white-space:nowrap;text-align:right;text-overflow:ellipsis;width:17.875rem}.calc .calc-buttons-container{-webkit-user-select:none;user-select:none;display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(5, 1fr);gap:.625rem;font-size:2rem}.calc .calc-buttons-container .calc-button{padding:.5rem;border-radius:100%;cursor:pointer;opacity:.9;position:relative;transition-duration:.4s;overflow:hidden}.calc .calc-buttons-container .calc-button>span{display:inline-flex;place-items:center;place-content:center;text-align:center;height:3rem;width:3rem;line-height:3rem}.calc .calc-buttons-container .calc-button:hover{opacity:1}.calc .calc-buttons-container .calc-button:active:after{opacity:1;transition:0s}.calc .calc-buttons-container .calc-button:after{content:\"\";background:rgba(255,255,255,.25);display:block;position:absolute;inset:0;opacity:0;transition:all .8s;border-radius:inherit}.calc .calc-buttons-container .calc-button.calc-button-double{grid-column:span 2;border-radius:5rem;justify-content:start}.calc .calc-buttons-container .calc-button.calc-button-digit{background-color:#444}.calc .calc-buttons-container .calc-button.calc-button-operand{background-color:orange}.calc .calc-buttons-container .calc-button.calc-button-operand.active{opacity:1;background-color:#fff;color:orange}.calc .calc-buttons-container .calc-button.calc-button-func{background-color:#afafaf;color:#000}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face{font-family:\"San Francisco\";font-weight:400;src:url(\"https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff\")}:host{display:inline-block}*,*::after,*::before{box-sizing:border-box}.calc{background-color:#000;border-radius:10px;display:inline-block;font-family:\"San Francisco\",-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen,Ubuntu,Cantarell,\"Open Sans\",\"Helvetica Neue\",sans-serif;color:#fff;padding:1rem}.calc .calc-solution{padding:3rem .5rem .5rem;font-size:4rem;overflow:hidden;white-space:nowrap;text-align:right;text-overflow:ellipsis;width:17.875rem}.calc .calc-buttons-container{-webkit-user-select:none;user-select:none;display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(5, 1fr);gap:.625rem;font-size:2rem}.calc .calc-buttons-container .calc-button{padding:.5rem;border-radius:100%;cursor:pointer;opacity:.9;position:relative;transition-duration:.4s;overflow:hidden}.calc .calc-buttons-container .calc-button>span{display:inline-flex;place-items:center;place-content:center;text-align:center;height:3rem;width:3rem;line-height:3rem}.calc .calc-buttons-container .calc-button:hover{opacity:1}.calc .calc-buttons-container .calc-button::after{content:\"\";background:rgba(255,255,255,.25);display:block;position:absolute;inset:0;opacity:0;transition:all .8s;border-radius:inherit}.calc .calc-buttons-container .calc-button:active::after{opacity:1;transition:0s}.calc .calc-buttons-container .calc-button.calc-button-double{grid-column:span 2;border-radius:5rem;justify-content:start}.calc .calc-buttons-container .calc-button.calc-button-digit{background-color:#444}.calc .calc-buttons-container .calc-button.calc-button-operand{background-color:orange}.calc .calc-buttons-container .calc-button.calc-button-operand.active{opacity:1;background-color:#fff;color:orange}.calc .calc-buttons-container .calc-button.calc-button-func{background-color:#afafaf;color:#000}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
@@ -10010,13 +10010,6 @@ var __webpack_exports__ = {};
 
 // UNUSED EXPORTS: iOSCalculator
 
-;// CONCATENATED MODULE: ./src/ios-calculator.html
-// Module
-var code = "<div class=\"calc\"> <div class=\"calc-solution\"></div> <div class=\"calc-buttons-container\"> <div id=\"reset\" class=\"calc-button calc-button-func\"> <span>AC</span> </div> <div id=\"plus-minus\" class=\"calc-button calc-button-func\"> <span>+/-</span> </div> <div id=\"percentage\" class=\"calc-button calc-button-func\"> <span>%</span> </div> <div data-operand=\"/\" class=\"calc-button calc-button-operand\"> <span>÷</span> </div> <div data-digit=\"7\" class=\"calc-button calc-button-digit\"> <span>7</span> </div> <div data-digit=\"8\" class=\"calc-button calc-button-digit\"> <span>8</span> </div> <div data-digit=\"9\" class=\"calc-button calc-button-digit\"> <span>9</span> </div> <div data-operand=\"*\" class=\"calc-button calc-button-operand\"> <span>X</span> </div> <div data-digit=\"4\" class=\"calc-button calc-button-digit\"> <span>4</span> </div> <div data-digit=\"5\" class=\"calc-button calc-button-digit\"> <span>5</span> </div> <div data-digit=\"6\" class=\"calc-button calc-button-digit\"> <span>6</span> </div> <div data-operand=\"-\" class=\"calc-button calc-button-operand\"> <span>-</span> </div> <div data-digit=\"1\" class=\"calc-button calc-button-digit\"> <span>1</span> </div> <div data-digit=\"2\" class=\"calc-button calc-button-digit\"> <span>2</span> </div> <div data-digit=\"3\" class=\"calc-button calc-button-digit\"> <span>3</span> </div> <div data-operand=\"+\" class=\"calc-button calc-button-operand\"> <span>+</span> </div> <div data-digit=\"0\" class=\"calc-button calc-button-double calc-button-digit\"> <span>0</span> </div> <div data-digit=\",\" class=\"calc-button calc-button-digit\"> <span>,</span> </div> <div data-operand=\"=\" class=\"calc-button calc-button-operand\"> <span>=</span> </div> </div> </div> ";
-// Exports
-/* harmony default export */ var ios_calculator = (code);
-// EXTERNAL MODULE: ./src/ios-calculator.scss
-var src_ios_calculator = __webpack_require__(682);
 ;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -67548,18 +67541,19 @@ _extends(classes, {
 
 Chain.createProxy(math);
 
+;// CONCATENATED MODULE: ./src/ios-calculator.html
+// Module
+var code = "<div class=\"calc\"> <div class=\"calc-solution\"></div> <div class=\"calc-buttons-container\"> <div id=\"reset\" class=\"calc-button calc-button-func\"> <span>AC</span> </div> <div id=\"plus-minus\" class=\"calc-button calc-button-func\"> <span>+/-</span> </div> <div id=\"percentage\" class=\"calc-button calc-button-func\"> <span>%</span> </div> <div data-operand=\"/\" class=\"calc-button calc-button-operand\"> <span>÷</span> </div> <div data-digit=\"7\" class=\"calc-button calc-button-digit\"> <span>7</span> </div> <div data-digit=\"8\" class=\"calc-button calc-button-digit\"> <span>8</span> </div> <div data-digit=\"9\" class=\"calc-button calc-button-digit\"> <span>9</span> </div> <div data-operand=\"*\" class=\"calc-button calc-button-operand\"> <span>X</span> </div> <div data-digit=\"4\" class=\"calc-button calc-button-digit\"> <span>4</span> </div> <div data-digit=\"5\" class=\"calc-button calc-button-digit\"> <span>5</span> </div> <div data-digit=\"6\" class=\"calc-button calc-button-digit\"> <span>6</span> </div> <div data-operand=\"-\" class=\"calc-button calc-button-operand\"> <span>-</span> </div> <div data-digit=\"1\" class=\"calc-button calc-button-digit\"> <span>1</span> </div> <div data-digit=\"2\" class=\"calc-button calc-button-digit\"> <span>2</span> </div> <div data-digit=\"3\" class=\"calc-button calc-button-digit\"> <span>3</span> </div> <div data-operand=\"+\" class=\"calc-button calc-button-operand\"> <span>+</span> </div> <div data-digit=\"0\" class=\"calc-button calc-button-double calc-button-digit\"> <span>0</span> </div> <div data-digit=\",\" class=\"calc-button calc-button-digit\"> <span>,</span> </div> <div data-operand=\"=\" class=\"calc-button calc-button-operand\"> <span>=</span> </div> </div> </div> ";
+// Exports
+/* harmony default export */ var ios_calculator = (code);
+// EXTERNAL MODULE: ./src/ios-calculator.scss
+var src_ios_calculator = __webpack_require__(682);
 ;// CONCATENATED MODULE: ./src/iOSCalculator.js
 function _classPrivateMethodInitSpec(obj, privateSet) { _checkPrivateRedeclaration(obj, privateSet); privateSet.add(obj); }
 
 function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
 
 function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
-
-function _classStaticPrivateFieldSpecGet(receiver, classConstructor, descriptor) { _classCheckPrivateStaticAccess(receiver, classConstructor); _classCheckPrivateStaticFieldDescriptor(descriptor, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
-
-function _classCheckPrivateStaticFieldDescriptor(descriptor, action) { if (descriptor === undefined) { throw new TypeError("attempted to " + action + " private static field before its declaration"); } }
-
-function _classCheckPrivateStaticAccess(receiver, classConstructor) { if (receiver !== classConstructor) { throw new TypeError("Private static access of wrong provenance"); } }
 
 function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
 
@@ -67580,6 +67574,40 @@ const template = document.createElement('template');
 template.innerHTML = ios_calculator;
 const sheet = document.createElement('style');
 sheet.innerHTML = src_ios_calculator/* default.toString */.Z.toString();
+const CHARACTERS = {
+  PLUS: '+',
+  MINUS: '-',
+  MULTIPLY: '*',
+  DIVIDE: '/',
+  EQUALS: '=',
+  NEGATIVE: '-',
+  COMMA: ','
+};
+/**
+ * @param {HTMLElement} elem
+ */
+
+function addActiveState(elem) {
+  elem.classList.add('active');
+}
+/**
+ * @param {HTMLElement} elem
+ */
+
+
+function removeActiveState(elem) {
+  elem.classList.remove('active');
+}
+/**
+ * @param {string} str
+ * @returns {boolean}
+ */
+
+
+function endsWithOperand(str) {
+  const lastChar = str.slice(-1);
+  return [CHARACTERS.PLUS, CHARACTERS.MINUS, CHARACTERS.DIVIDE, CHARACTERS.MULTIPLY].includes(lastChar);
+}
 
 var _currentExpression = /*#__PURE__*/new WeakMap();
 
@@ -67611,12 +67639,6 @@ var _onDigitClick = /*#__PURE__*/new WeakSet();
 
 var _onOperandClick = /*#__PURE__*/new WeakSet();
 
-var _addActiveState = /*#__PURE__*/new WeakSet();
-
-var _removeActiveState = /*#__PURE__*/new WeakSet();
-
-var _endsWithOperand = /*#__PURE__*/new WeakSet();
-
 var _getCurrentSolution = /*#__PURE__*/new WeakSet();
 
 var _displaySolution = /*#__PURE__*/new WeakSet();
@@ -67645,12 +67667,6 @@ class iOSCalculator extends HTMLElement {
     _classPrivateMethodInitSpec(this, _displaySolution);
 
     _classPrivateMethodInitSpec(this, _getCurrentSolution);
-
-    _classPrivateMethodInitSpec(this, _endsWithOperand);
-
-    _classPrivateMethodInitSpec(this, _removeActiveState);
-
-    _classPrivateMethodInitSpec(this, _addActiveState);
 
     _classPrivateMethodInitSpec(this, _onOperandClick);
 
@@ -67751,17 +67767,6 @@ class iOSCalculator extends HTMLElement {
    */
 
 
-  /**
-   * @param {string} name
-   * @param {string} oldValue
-   * @param {string} newValue
-   */
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (newValue != oldValue) {
-      switch (name) {}
-    }
-  }
-
 }
 
 function _onResetClick2(event) {
@@ -67775,7 +67780,7 @@ function _onResetClick2(event) {
 
     _classPrivateFieldSet(this, _currentExpression, '');
 
-    _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));
+    _classPrivateFieldGet(this, _operandButtons).forEach(removeActiveState);
   } else {
     // C
     _classPrivateFieldSet(this, _currentInput, '0');
@@ -67796,10 +67801,10 @@ function _onPlusMinusClick2(event) {
     number = _classPrivateMethodGet(this, _getCurrentSolution, _getCurrentSolution2).call(this);
   }
 
-  if (number.startsWith(_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE)) {
+  if (number.startsWith(CHARACTERS.NEGATIVE)) {
     _classPrivateFieldSet(this, _currentInput, number.slice(1));
   } else {
-    _classPrivateFieldSet(this, _currentInput, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE + number);
+    _classPrivateFieldSet(this, _currentInput, CHARACTERS.NEGATIVE + number);
   }
 
   _classPrivateMethodGet(this, _displaySolution, _displaySolution2).call(this);
@@ -67820,7 +67825,7 @@ function _onPercentageClick2(event) {
 
   _classPrivateFieldSet(this, _currentInput, String(evaluate(intermediateInput)));
 
-  _classPrivateFieldSet(this, _currentInput, _classPrivateFieldGet(this, _currentInput).replace('.', _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA));
+  _classPrivateFieldSet(this, _currentInput, _classPrivateFieldGet(this, _currentInput).replace('.', CHARACTERS.COMMA));
 
   _classPrivateMethodGet(this, _displaySolution, _displaySolution2).call(this);
 }
@@ -67829,12 +67834,12 @@ function _onDigitClick2(event, digitButton) {
   event.preventDefault();
   const clickedDigit = digitButton.dataset.digit || '';
 
-  if (clickedDigit === _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE && _classPrivateFieldGet(this, _currentInput).includes(_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE)) {
+  if (clickedDigit === CHARACTERS.NEGATIVE && _classPrivateFieldGet(this, _currentInput).includes(CHARACTERS.NEGATIVE)) {
     // prevent clicking multiple times -> ,
     return;
   }
 
-  if (!_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, _classPrivateFieldGet(this, _currentExpression))) {
+  if (!endsWithOperand(_classPrivateFieldGet(this, _currentExpression))) {
     // reset expression if user starts a new calculations
     // -> clicking a number with clicking an operand beforehand
     _classPrivateFieldSet(this, _currentExpression, '');
@@ -67842,12 +67847,12 @@ function _onDigitClick2(event, digitButton) {
 
   _classPrivateFieldGet(this, _resetButton).querySelector('span').textContent = 'C';
 
-  if (_classPrivateFieldGet(this, _currentInput) === '' && clickedDigit === _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA) {
-    _classPrivateFieldSet(this, _currentInput, '0' + _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA);
-  } else if (_classPrivateFieldGet(this, _currentInput) === '0' && clickedDigit !== _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA) {
+  if (_classPrivateFieldGet(this, _currentInput) === '' && clickedDigit === CHARACTERS.COMMA) {
+    _classPrivateFieldSet(this, _currentInput, `0${CHARACTERS.COMMA}`);
+  } else if (_classPrivateFieldGet(this, _currentInput) === '0' && clickedDigit !== CHARACTERS.COMMA) {
     _classPrivateFieldSet(this, _currentInput, clickedDigit);
-  } else if (_classPrivateFieldGet(this, _currentInput) === `${_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE}0` && clickedDigit !== _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA) {
-    _classPrivateFieldSet(this, _currentInput, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).NEGATIVE + clickedDigit);
+  } else if (_classPrivateFieldGet(this, _currentInput) === `${CHARACTERS.NEGATIVE}0` && clickedDigit !== CHARACTERS.COMMA) {
+    _classPrivateFieldSet(this, _currentInput, CHARACTERS.NEGATIVE + clickedDigit);
   } else {
     _classPrivateFieldSet(this, _currentInput, _classPrivateFieldGet(this, _currentInput) + clickedDigit);
   }
@@ -67858,7 +67863,7 @@ function _onDigitClick2(event, digitButton) {
 function _onOperandClick2(event, operandButton) {
   event.preventDefault();
 
-  _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));
+  _classPrivateFieldGet(this, _operandButtons).forEach(removeActiveState);
 
   const clickedOperand = operandButton.dataset.operand;
 
@@ -67871,22 +67876,22 @@ function _onOperandClick2(event, operandButton) {
     _classPrivateFieldSet(this, _currentExpression, '0');
   }
 
-  if (_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, _classPrivateFieldGet(this, _currentExpression))) {
+  if (endsWithOperand(_classPrivateFieldGet(this, _currentExpression))) {
     // if the user clicks two operands in a row, remove the last one
     _classPrivateFieldSet(this, _currentExpression, _classPrivateFieldGet(this, _currentExpression).slice(0, -1));
   }
 
-  if (clickedOperand !== _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).EQUALS) {
+  if (clickedOperand !== CHARACTERS.EQUALS) {
     _classPrivateFieldSet(this, _currentExpression, _classPrivateFieldGet(this, _currentExpression) + clickedOperand);
 
-    _classPrivateMethodGet(this, _addActiveState, _addActiveState2).call(this, operandButton);
+    addActiveState(operandButton);
   } else {
     if (_classPrivateFieldGet(this, _currentExpression).endsWith(')')) {
       // clicking = multiple times in a row
       let latestOperandIndex = -1;
 
-      for (let index = _classPrivateFieldGet(this, _currentExpression).length - 1; index > 0; index--) {
-        if (_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, _classPrivateFieldGet(this, _currentExpression)[index])) {
+      for (let index = _classPrivateFieldGet(this, _currentExpression).length - 1; index > 0; index -= 1) {
+        if (endsWithOperand(_classPrivateFieldGet(this, _currentExpression)[index])) {
           latestOperandIndex = index;
           break;
         }
@@ -67905,23 +67910,10 @@ function _onOperandClick2(event, operandButton) {
   _classPrivateMethodGet(this, _displaySolution, _displaySolution2).call(this);
 }
 
-function _addActiveState2(elem) {
-  elem.classList.add('active');
-}
-
-function _removeActiveState2(elem) {
-  elem.classList.remove('active');
-}
-
-function _endsWithOperand2(str) {
-  const lastChar = str.slice(-1);
-  return [_classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).PLUS, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).MINUS, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).DIVIDE, _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).MULTIPLY].includes(lastChar);
-}
-
 function _getCurrentSolution2() {
   let expressionToEvaluate = _classPrivateFieldGet(this, _currentExpression) || '0';
 
-  if (_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, expressionToEvaluate)) {
+  if (endsWithOperand(expressionToEvaluate)) {
     expressionToEvaluate = expressionToEvaluate.slice(0, -1);
   }
 
@@ -67930,6 +67922,7 @@ function _getCurrentSolution2() {
   try {
     return evaluate(expressionToEvaluate).toString();
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error(err);
     return 'Error';
   }
@@ -67939,14 +67932,14 @@ function _displaySolution2() {
   let integerToDisplay;
 
   if (_classPrivateFieldGet(this, _currentInput).length > 0) {
-    _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));
+    _classPrivateFieldGet(this, _operandButtons).forEach(removeActiveState);
 
     integerToDisplay = _classPrivateFieldGet(this, _currentInput);
   } else if (_classPrivateFieldGet(this, _currentExpression).length > 0) {
-    let expressionToDisplay = _classPrivateFieldGet(this, _currentExpression) || '0';
+    const expressionToDisplay = _classPrivateFieldGet(this, _currentExpression) || '0';
 
-    if (!_classPrivateMethodGet(this, _endsWithOperand, _endsWithOperand2).call(this, expressionToDisplay)) {
-      _classPrivateFieldGet(this, _operandButtons).forEach(_classPrivateMethodGet(this, _removeActiveState, _removeActiveState2));
+    if (!endsWithOperand(expressionToDisplay)) {
+      _classPrivateFieldGet(this, _operandButtons).forEach(removeActiveState);
     }
 
     integerToDisplay = _classPrivateMethodGet(this, _getCurrentSolution, _getCurrentSolution2).call(this);
@@ -67954,22 +67947,10 @@ function _displaySolution2() {
     integerToDisplay = '0';
   }
 
-  integerToDisplay = integerToDisplay.replace('.', _classStaticPrivateFieldSpecGet(iOSCalculator, iOSCalculator, _CHARACTERS).COMMA);
+  integerToDisplay = integerToDisplay.replace('.', CHARACTERS.COMMA);
   _classPrivateFieldGet(this, _calcSolution).textContent = integerToDisplay;
 }
 
-var _CHARACTERS = {
-  writable: true,
-  value: {
-    PLUS: '+',
-    MINUS: '-',
-    MULTIPLY: '*',
-    DIVIDE: '/',
-    EQUALS: '=',
-    NEGATIVE: '-',
-    COMMA: ','
-  }
-};
 window.customElements.define('ios-calculator', iOSCalculator);
 }();
 /******/ })()

@@ -14,9 +14,9 @@
   box-sizing: border-box;
 }
 
-$buttonSize: 3rem;
-$buttonPadding: 0.5rem;
-$buttonsGap: 0.625rem;
+$button-size: 3rem;
+$button-padding: 0.5rem;
+$buttons-gap: 0.625rem;
 
 .calc {
   background-color: black;
@@ -28,13 +28,15 @@ $buttonsGap: 0.625rem;
   padding: 1rem;
 
   .calc-solution {
-    padding: 3rem 0.5rem 0.5rem 0.5rem;
+    padding: 3rem 0.5rem 0.5rem;
     font-size: 4rem;
     overflow: hidden;
     white-space: nowrap;
     text-align: right;
     text-overflow: ellipsis;
-    width: calc($buttonsGap * 3 + calc($buttonSize + $buttonPadding * 2) * 4);
+    width: calc(
+      $buttons-gap * 3 + calc($button-size + $button-padding * 2) * 4
+    );
   }
 
   .calc-buttons-container {
@@ -42,15 +44,14 @@ $buttonsGap: 0.625rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: $buttonsGap;
+    gap: $buttons-gap;
     font-size: 2rem;
 
     .calc-button {
-      padding: $buttonPadding;
+      padding: $button-padding;
       border-radius: 100%;
       cursor: pointer;
       opacity: 0.9;
-
       position: relative;
       transition-duration: 0.4s;
       overflow: hidden;
@@ -60,29 +61,29 @@ $buttonsGap: 0.625rem;
         place-items: center;
         place-content: center;
         text-align: center;
-        height: $buttonSize;
-        width: $buttonSize;
-        line-height: $buttonSize;
+        height: $button-size;
+        width: $button-size;
+        line-height: $button-size;
       }
 
       &:hover {
         opacity: 1;
       }
 
-      &:active:after {
-        opacity: 1;
-        transition: 0s;
-      }
-
-      &:after {
+      &::after {
         content: '';
-        background: rgba(255, 255, 255, 0.25);
+        background: rgb(255 255 255 / 25%);
         display: block;
         position: absolute;
         inset: 0;
         opacity: 0;
         transition: all 0.8s;
         border-radius: inherit;
+      }
+
+      &:active::after {
+        opacity: 1;
+        transition: 0s;
       }
 
       &.calc-button-double {
@@ -92,7 +93,7 @@ $buttonsGap: 0.625rem;
       }
 
       &.calc-button-digit {
-        background-color: #444444;
+        background-color: #444;
       }
 
       &.calc-button-operand {
@@ -106,7 +107,7 @@ $buttonsGap: 0.625rem;
       }
 
       &.calc-button-func {
-        background-color: rgb(175, 175, 175);
+        background-color: rgb(175 175 175);
         color: black;
       }
     }

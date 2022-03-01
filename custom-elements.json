@@ -19,7 +19,7 @@
                 "text": "object"
               },
               "static": true,
-              "default": "{\n    PLUS: \"+\",\n    MINUS: \"-\",\n    MULTIPLY: \"*\",\n    DIVIDE: \"/\",\n    EQUALS: \"=\",\n    NEGATIVE: \"-\",\n    COMMA: \",\",\n  }"
+              "default": "{\n    PLUS: '+',\n    MINUS: '-',\n    MULTIPLY: '*',\n    DIVIDE: '/',\n    EQUALS: '=',\n    NEGATIVE: '-',\n    COMMA: ',',\n  }"
             },
             {
               "kind": "field",
@@ -28,7 +28,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"\""
+              "default": "''"
             },
             {
               "kind": "field",
@@ -37,7 +37,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"\""
+              "default": "''"
             },
             {
               "kind": "field",
@@ -46,7 +46,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"\""
+              "default": "''"
             },
             {
               "kind": "field",
@@ -55,7 +55,7 @@
               "type": {
                 "text": "string"
               },
-              "default": "\"\""
+              "default": "''"
             },
             {
               "kind": "field",
@@ -107,20 +107,50 @@
             },
             {
               "kind": "method",
-              "name": "#onResetClick"
+              "name": "#onResetClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "PointerEvent"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",
-              "name": "#onPlusMinusClick"
+              "name": "#onPlusMinusClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "PointerEvent"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",
-              "name": "#onPercentageClick"
+              "name": "#onPercentageClick",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "PointerEvent"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",
               "name": "#onDigitClick",
               "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "PointerEvent"
+                  }
+                },
                 {
                   "name": "digitButton",
                   "type": {
@@ -138,6 +168,12 @@
               "kind": "method",
               "name": "#onOperandClick",
               "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "PointerEvent"
+                  }
+                },
                 {
                   "name": "operandButton",
                   "type": {

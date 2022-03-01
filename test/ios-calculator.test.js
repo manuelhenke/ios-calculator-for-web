@@ -183,7 +183,7 @@ describe('iOS Calculator', () => {
   };
 
   scenarios.forEach((scenario, index) => {
-    it(scenario.name || `scenario ${  index}`, () => {
+    it(scenario.name || `scenario ${index}`, () => {
       testScenario(scenario.steps, scenario.solution);
     });
   });
