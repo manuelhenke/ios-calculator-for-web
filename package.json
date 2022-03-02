@@ -1,6 +1,6 @@
 {
   "name": "ios-calculator-for-web",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "This is a calculator for the web following the design of the iOS-Calculator.",
   "keywords": [
     "calculator",
@@ -107,8 +107,7 @@
   "customElements": "custom-elements.json",
   "postcss": {
     "plugins": {
-      "autoprefixer": {},
-      "stylelint": {}
+      "autoprefixer": {}
     }
   }
 }
