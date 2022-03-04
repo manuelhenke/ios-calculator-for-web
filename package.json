@@ -45,9 +45,7 @@
     ]
   },
   "browserslist": [
-    "last 2 years",
-    "> 1%",
-    "not dead"
+    "last 4 version"
   ],
   "prettier": {
     "arrowParens": "avoid",
