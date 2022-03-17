@@ -1,3 +1,5 @@
+[![Publish to NPM](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml/badge.svg)](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml)
+
 # ios-calculator-for-web
 
 This is a calculator for the web following the design of the iOS-Calculator.
@@ -25,5 +27,5 @@ Just add this HTML-Snippet in your code and wrap it into any kind of container.
 
 # Example
 
-Can also take a look at the [demo.html](demo.html) to get an interactive example.
+You can try it at [CodePen](https://codepen.io/manuelhenke/pen/WNXKpbr) or just take a look at the [demo.html](demo.html) included in this project.
 ![Example Image](ios-calc-example.png)
