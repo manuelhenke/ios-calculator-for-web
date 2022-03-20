@@ -1,4 +1,3 @@
-import { evaluate } from 'mathjs';
 import html from './ios-calculator.html';
 import shadowCss from './ios-calculator.scss';
 
@@ -182,7 +181,8 @@ export class iOSCalculator extends HTMLElement {
 
     let intermediateInput = number.replace(/,/g, '.');
     intermediateInput += '/100';
-    this.#currentInput = String(evaluate(intermediateInput));
+    // eslint-disable-next-line no-eval
+    this.#currentInput = String(eval(intermediateInput));
     this.#currentInput = this.#currentInput.replace('.', CHARACTERS.COMMA);
     this.#displaySolution();
   }
@@ -299,7 +299,8 @@ export class iOSCalculator extends HTMLElement {
     expressionToEvaluate = expressionToEvaluate.replace(/,/g, '.');
 
     try {
-      return evaluate(expressionToEvaluate).toString();
+      // eslint-disable-next-line no-eval
+      return eval(expressionToEvaluate).toString();
     } catch (err) {
       // eslint-disable-next-line no-console
       console.error(err);

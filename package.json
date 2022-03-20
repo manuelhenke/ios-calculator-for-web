@@ -1,6 +1,6 @@
 {
   "name": "ios-calculator-for-web",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "This is a calculator for the web following the design of the iOS-Calculator.",
   "keywords": [
     "calculator",
@@ -68,9 +68,7 @@
       "stylelint-config-prettier-scss"
     ]
   },
-  "dependencies": {
-    "mathjs": "^10.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
