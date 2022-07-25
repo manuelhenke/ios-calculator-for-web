@@ -1,4 +1,5 @@
 [![Publish to NPM](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml/badge.svg)](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml)
+[![NPM version](https://img.shields.io/npm/v/ios-calculator-for-web.svg?style=flat)](https://www.npmjs.com/package/ios-calculator-for-web)
 
 # ios-calculator-for-web
 
