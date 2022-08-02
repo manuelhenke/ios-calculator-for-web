@@ -73,7 +73,7 @@
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
-    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/config-conventional": "^17.0.3",
     "@custom-elements-manifest/analyzer": "^0.5.7",
     "@open-wc/eslint-config": "^7.0.0",
     "@open-wc/testing": "^3.0.4",
