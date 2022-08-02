@@ -8,7 +8,7 @@
 
 This is a calculator for the web following the design of the iOS-Calculator.
 
-# Getting Started
+## Getting Started
 
 Install the package via `npm` or `yarn` and deliver the script to the user.
 This can be done via `import`, `require` or just inserting a `script` tag.
@@ -21,7 +21,7 @@ npm i ios-calculator-for-web
 yarn add ios-calculator-for-web
 ```
 
-# Usage
+## Usage
 
 Just add this HTML-Snippet in your code and wrap it into any kind of container.
 
@@ -29,11 +29,11 @@ Just add this HTML-Snippet in your code and wrap it into any kind of container.
 <ios-calculator></ios-calculator>
 ```
 
-# Example
+## Example
 
 You can try it at [CodePen](https://codepen.io/manuelhenke/pen/WNXKpbr) or just take a look at the [demo.html](demo.html) included in this project.
 ![Example Image](ios-calc-example.png)
 
-# License
+## License
 
 [MIT License](./LICENSE)
