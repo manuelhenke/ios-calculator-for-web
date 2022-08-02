@@ -1,0 +1,10 @@
+.github/
+.husky/
+test/
+.editorconfig
+.eslintignore
+.nvmrc
+.prettierignore
+jsconfig.json
+web-test-runner.config.mjs
+webpack.cjs

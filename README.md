@@ -1,4 +1,7 @@
-[![Publish to NPM](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml/badge.svg)](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml)
+[![CI](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/ci.yml/badge.svg)](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/ci.yml)
+[![Publish NPM package](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml/badge.svg)](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/publish.yml)
+[![CodeQL](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/manuelhenke/ios-calculator-for-web/actions/workflows/codeql-analysis.yml)
+[![License](https://img.shields.io/github/license/manuelhenke/ios-calculator-for-web)](./LICENSE)
 [![NPM version](https://img.shields.io/npm/v/ios-calculator-for-web.svg?style=flat)](https://www.npmjs.com/package/ios-calculator-for-web)
 
 # ios-calculator-for-web
@@ -30,3 +33,7 @@ Just add this HTML-Snippet in your code and wrap it into any kind of container.
 
 You can try it at [CodePen](https://codepen.io/manuelhenke/pen/WNXKpbr) or just take a look at the [demo.html](demo.html) included in this project.
 ![Example Image](ios-calc-example.png)
+
+# License
+
+[MIT License](./LICENSE)

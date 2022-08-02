@@ -1,16 +1,15 @@
-name: 'Publish NPM package'
+name: 'Continuous Integration'
 
 on:
-  workflow_run:
-    workflows: ['Continuous Integration']
-    types:
-      - completed
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
 
 jobs:
-  publish:
-    name: Deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    environment: production
     timeout-minutes: 5
 
     steps:
@@ -38,10 +37,8 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: yarn install --frozen-lockfile
 
-      - name: Build 🛠
-        run: yarn build
+      - name: Run linter ✨
+        run: yarn lint
 
-      - name: Publish to npm 📩
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - name: Run tests 👀
+        run: yarn test
