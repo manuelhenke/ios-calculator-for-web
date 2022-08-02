@@ -74,7 +74,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@commitlint/config-conventional": "^16.2.1",
-    "@custom-elements-manifest/analyzer": "^0.5.7",
+    "@custom-elements-manifest/analyzer": "^0.6.3",
     "@open-wc/eslint-config": "^7.0.0",
     "@open-wc/testing": "^3.0.4",
     "@web/test-runner": "0.13.27",
