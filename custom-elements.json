@@ -13,16 +13,6 @@
           "members": [
             {
               "kind": "field",
-              "name": "#CHARACTERS",
-              "privacy": "private",
-              "type": {
-                "text": "object"
-              },
-              "static": true,
-              "default": "{\n    PLUS: '+',\n    MINUS: '-',\n    MULTIPLY: '*',\n    DIVIDE: '/',\n    EQUALS: '=',\n    NEGATIVE: '-',\n    COMMA: ',',\n  }"
-            },
-            {
-              "kind": "field",
               "name": "#currentExpression",
               "privacy": "private",
               "type": {
@@ -181,47 +171,6 @@
                   }
                 }
               ]
-            },
-            {
-              "kind": "method",
-              "name": "#addActiveState",
-              "parameters": [
-                {
-                  "name": "elem",
-                  "type": {
-                    "text": "HTMLElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "#removeActiveState",
-              "parameters": [
-                {
-                  "name": "elem",
-                  "type": {
-                    "text": "HTMLElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "#endsWithOperand",
-              "parameters": [
-                {
-                  "name": "str",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ],
-              "return": {
-                "type": {
-                  "text": ""
-                }
-              }
             },
             {
               "kind": "method",
