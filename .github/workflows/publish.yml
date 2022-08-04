@@ -1,23 +1,24 @@
-name: 'Publish NPM package'
+name: 'Publish NPM Package'
 
 on:
-  workflow_run:
-    workflows: ['Continuous Integration']
+  release:
     types:
-      - completed
+      - published
 
 jobs:
   publish:
-    name: Deploy
+    name: Publish NPM Package
     runs-on: ubuntu-latest
-    environment: production
+    environment: npm
     timeout-minutes: 5
 
     steps:
       - name: Checkout 🛎
+        id: checkout
         uses: actions/checkout@master
 
       - name: Setup node env 🏗
+        id: setup
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
@@ -36,12 +37,17 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies 👨🏻‍💻
+        id: install
         run: yarn install --frozen-lockfile
 
       - name: Build 🛠
+        id: build
         run: yarn build
 
       - name: Publish to npm 📩
+        id: npm-publish
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          dry-run: false
+          check-version: false
