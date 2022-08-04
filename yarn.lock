@@ -1544,7 +1544,7 @@
     rollup "^2.67.0"
     whatwg-url "^11.0.0"
 
-"@web/dev-server@^0.1.24":
+"@web/dev-server@^0.1.32":
   version "0.1.32"
   resolved "https://registry.yarnpkg.com/@web/dev-server/-/dev-server-0.1.32.tgz#d2c963a43d2107cd4dca7067f343fd9b5e1f2f80"
   integrity sha512-XcM3XPlGEPHx5pKcQ+pG7Lhw84sRV8BNpBxsAN6z9VkvSIVkJscFmLnmjqO5z85/m8uPMfm/gHimOsRVS8MFpg==
@@ -1582,7 +1582,7 @@
     chrome-launcher "^0.15.0"
     puppeteer-core "^13.1.3"
 
-"@web/test-runner-commands@^0.6.0", "@web/test-runner-commands@^0.6.1":
+"@web/test-runner-commands@^0.6.1", "@web/test-runner-commands@^0.6.3":
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/@web/test-runner-commands/-/test-runner-commands-0.6.3.tgz#a34689c519a9b5bc57cfba54d32328385f4ff4d4"
   integrity sha512-+tMjOgBh1z77rM3Kt3rUrl+gzyUOdcHr2EbAWeMVU2v0AV/c+DTFQNZTi7iw8j5v/bVSlR8p4lFR6xe5mGVYvw==
@@ -1590,7 +1590,7 @@
     "@web/test-runner-core" "^0.10.27"
     mkdirp "^1.0.4"
 
-"@web/test-runner-core@^0.10.20", "@web/test-runner-core@^0.10.22", "@web/test-runner-core@^0.10.27":
+"@web/test-runner-core@^0.10.20", "@web/test-runner-core@^0.10.27":
   version "0.10.27"
   resolved "https://registry.yarnpkg.com/@web/test-runner-core/-/test-runner-core-0.10.27.tgz#8d1430f2364fb36b3ac15b9b43034fae9d94e177"
   integrity sha512-ClV/hSxs4wDm/ANFfQOdRRFb/c0sYywC1QfUXG/nS4vTp3nnt7x7mjydtMGGLmvK9f6Zkubkc1aa+7ryfmVwNA==
@@ -1640,17 +1640,17 @@
     "@types/mocha" "^8.2.0"
     "@web/test-runner-core" "^0.10.20"
 
-"@web/test-runner@0.13.27":
-  version "0.13.27"
-  resolved "https://registry.yarnpkg.com/@web/test-runner/-/test-runner-0.13.27.tgz#6a099f9904b0cf51ef172bf79ffadbf6aad601c4"
-  integrity sha512-yVhXK9sPJE2VQs1/KPTIeQvUxh+02OZkn+tgcr0+W8ovvrFD4ucF2X26cpeOTuD+Y67ERUi/EopIze3aelw6sg==
+"@web/test-runner@0.13.31":
+  version "0.13.31"
+  resolved "https://registry.yarnpkg.com/@web/test-runner/-/test-runner-0.13.31.tgz#bbc7536eb080088f97edcd4db7b335e754da7bbf"
+  integrity sha512-QMj/25U25AkhN4ffBoMMPdpQLNojL8cAzlyIh/oyVp385Cjmd4Hz8S0u4PvWJmDRmPerbJRNtsWafB8/EcQ1rA==
   dependencies:
     "@web/browser-logs" "^0.2.2"
     "@web/config-loader" "^0.1.3"
-    "@web/dev-server" "^0.1.24"
+    "@web/dev-server" "^0.1.32"
     "@web/test-runner-chrome" "^0.10.7"
-    "@web/test-runner-commands" "^0.6.0"
-    "@web/test-runner-core" "^0.10.22"
+    "@web/test-runner-commands" "^0.6.3"
+    "@web/test-runner-core" "^0.10.27"
     "@web/test-runner-mocha" "^0.7.5"
     camelcase "^6.2.0"
     command-line-args "^5.1.1"
@@ -2924,9 +2924,9 @@ eslint-plugin-import@^2.18.2, eslint-plugin-import@^2.25.4:
     tsconfig-paths "^3.14.1"
 
 eslint-plugin-lit-a11y@^2.1.0, eslint-plugin-lit-a11y@^2.2.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-lit-a11y/-/eslint-plugin-lit-a11y-2.2.1.tgz#d73273132258ac23f0a17df18b8e8345a3376b55"
-  integrity sha512-Ao2MP3NjMGON8x8sdwGgmVW79MiQ4nOB7OQzodLPk4sljGAvdyXulyGVNY6PGWfIPVee+3X262z4Aq2poXO+LA==
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lit-a11y/-/eslint-plugin-lit-a11y-2.2.2.tgz#e3f14f207e6c07ef2e40c93ea8e9e15b3dae8a79"
+  integrity sha512-9dJfnwPOOA6x7Ow/+GFoOt1hr4mSNrF6KBWQ2OFFAY/9aBYtyBX4fRbpxqS2y3ld66/bjWru2+LGWgNVr5GxzQ==
   dependencies:
     aria-query "^4.2.2"
     axe-core "^4.3.3"
@@ -5154,18 +5154,18 @@ safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-loader@^12.6.0:
-  version "12.6.0"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-12.6.0.tgz#5148362c8e2cdd4b950f3c63ac5d16dbfed37bcb"
-  integrity sha512-oLTaH0YCtX4cfnJZxKSLAyglED0naiYfNG1iXfU5w1LNZ+ukoA5DtyDIN5zmKVZwYNJP4KRc5Y3hkWga+7tYfA==
+sass-loader@^13.0.2:
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-13.0.2.tgz#e81a909048e06520e9f2ff25113a801065adb3fe"
+  integrity sha512-BbiqbVmbfJaWVeOOAu2o7DhYWtcNmTfvroVgFXa6k2hHheMxNAeDHLNoDy/Q5aoaVlz0LH+MbMktKwm9vN/j8Q==
   dependencies:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
 sass@^1.49.8:
-  version "1.54.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.0.tgz#24873673265e2a4fe3d3a997f714971db2fba1f4"
-  integrity sha512-C4zp79GCXZfK0yoHZg+GxF818/aclhp9F48XBu/+bm9vXEVAYov9iU3FBVRMq3Hx3OA4jfKL+p2K9180mEh0xQ==
+  version "1.54.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.2.tgz#574cad83814c930ef2475921b9cb5d8203ae8867"
+  integrity sha512-wbVV26sejsCIbBScZZtNkvnrB/bVCQ8hSlZ01D9nzsVh9zLqCkWrlpvTb3YEb6xsuNi9cx75hncqwikHFSz7tw==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
