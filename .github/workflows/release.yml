@@ -57,7 +57,7 @@ jobs:
 
       - if: steps.npm-publish.outputs.type == 'none'
         name: Check new version
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           script: |
             core.setFailed('No new version in package.json detected')
