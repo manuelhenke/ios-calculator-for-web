@@ -31,18 +31,17 @@ function removeActiveState(elem) {
   elem.classList.remove('active');
 }
 
+function isOperand(str) {
+  return [CHARACTERS.PLUS, CHARACTERS.MINUS, CHARACTERS.DIVIDE, CHARACTERS.MULTIPLY].includes(str);
+}
+
 /**
  * @param {string} str
  * @returns {boolean}
  */
 function endsWithOperand(str) {
   const lastChar = str.slice(-1);
-  return [
-    CHARACTERS.PLUS,
-    CHARACTERS.MINUS,
-    CHARACTERS.DIVIDE,
-    CHARACTERS.MULTIPLY,
-  ].includes(lastChar);
+  return isOperand(lastChar);
 }
 
 export class iOSCalculator extends HTMLElement {
@@ -89,31 +88,17 @@ export class iOSCalculator extends HTMLElement {
     this.#plusMinusButton = shadowRoot.getElementById('plus-minus');
     this.#percentageButton = shadowRoot.getElementById('percentage');
 
-    this.#operandButtons = Array.from(
-      shadowRoot.querySelectorAll('.calc-button-operand')
-    );
-    this.#digitButtons = Array.from(
-      shadowRoot.querySelectorAll('.calc-button-digit')
-    );
+    this.#operandButtons = Array.from(shadowRoot.querySelectorAll('.calc-button-operand'));
+    this.#digitButtons = Array.from(shadowRoot.querySelectorAll('.calc-button-digit'));
 
     this.#resetButton.addEventListener('click', this.#onResetClick.bind(this));
-    this.#plusMinusButton.addEventListener(
-      'click',
-      this.#onPlusMinusClick.bind(this)
+    this.#plusMinusButton.addEventListener('click', this.#onPlusMinusClick.bind(this));
+    this.#percentageButton.addEventListener('click', this.#onPercentageClick.bind(this));
+    this.#operandButtons.forEach((operandButton) =>
+      operandButton.addEventListener('click', (event) => this.#onOperandClick(event, operandButton))
     );
-    this.#percentageButton.addEventListener(
-      'click',
-      this.#onPercentageClick.bind(this)
-    );
-    this.#operandButtons.forEach(operandButton =>
-      operandButton.addEventListener('click', event =>
-        this.#onOperandClick(event, operandButton)
-      )
-    );
-    this.#digitButtons.forEach(digitButton =>
-      digitButton.addEventListener('click', event =>
-        this.#onDigitClick(event, digitButton)
-      )
+    this.#digitButtons.forEach((digitButton) =>
+      digitButton.addEventListener('click', (event) => this.#onDigitClick(event, digitButton))
     );
   }
 
@@ -196,10 +181,7 @@ export class iOSCalculator extends HTMLElement {
     event.preventDefault();
     const clickedDigit = digitButton.dataset.digit || '';
 
-    if (
-      clickedDigit === CHARACTERS.NEGATIVE &&
-      this.#currentInput.includes(CHARACTERS.NEGATIVE)
-    ) {
+    if (clickedDigit === CHARACTERS.NEGATIVE && this.#currentInput.includes(CHARACTERS.NEGATIVE)) {
       // prevent clicking multiple times -> ,
       return;
     }
@@ -214,10 +196,7 @@ export class iOSCalculator extends HTMLElement {
 
     if (this.#currentInput === '' && clickedDigit === CHARACTERS.COMMA) {
       this.#currentInput = `0${CHARACTERS.COMMA}`;
-    } else if (
-      this.#currentInput === '0' &&
-      clickedDigit !== CHARACTERS.COMMA
-    ) {
+    } else if (this.#currentInput === '0' && clickedDigit !== CHARACTERS.COMMA) {
       this.#currentInput = clickedDigit;
     } else if (
       this.#currentInput === `${CHARACTERS.NEGATIVE}0` &&
@@ -261,23 +240,10 @@ export class iOSCalculator extends HTMLElement {
     } else {
       if (this.#currentExpression.endsWith(')')) {
         // clicking = multiple times in a row
-        let latestOperandIndex = -1;
-        for (
-          let index = this.#currentExpression.length - 1;
-          index > 0;
-          index -= 1
-        ) {
-          if (endsWithOperand(this.#currentExpression[index])) {
-            latestOperandIndex = index;
-            break;
-          }
-        }
+        const latestOperandIndex = this.#getLatestOperandIndex();
 
         if (latestOperandIndex !== -1) {
-          this.#currentExpression += this.#currentExpression.slice(
-            latestOperandIndex,
-            -1
-          );
+          this.#currentExpression += this.#currentExpression.slice(latestOperandIndex, -1);
         }
       }
 
@@ -287,6 +253,18 @@ export class iOSCalculator extends HTMLElement {
     this.#currentInput = '';
 
     this.#displaySolution();
+  }
+
+  #getLatestOperandIndex() {
+    let latestOperandIndex = -1;
+    for (let index = this.#currentExpression.length - 1; index > 0; index -= 1) {
+      if (isOperand(this.#currentExpression[index])) {
+        latestOperandIndex = index;
+        break;
+      }
+    }
+
+    return latestOperandIndex;
   }
 
   #getCurrentSolution() {

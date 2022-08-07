@@ -125,7 +125,7 @@ describe('iOS Calculator', () => {
     },
   ];
 
-  const stepToSelector = step => {
+  const stepToSelector = (step) => {
     switch (step) {
       case '0':
       case '1':

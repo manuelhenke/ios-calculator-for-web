@@ -22,8 +22,8 @@ $buttons-gap: 0.625rem;
   background-color: black;
   border-radius: 10px;
   display: inline-block;
-  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
   padding: 1rem;
 
@@ -34,9 +34,7 @@ $buttons-gap: 0.625rem;
     white-space: nowrap;
     text-align: right;
     text-overflow: ellipsis;
-    width: calc(
-      $buttons-gap * 3 + calc($button-size + $button-padding * 2) * 4
-    );
+    width: calc($buttons-gap * 3 + calc($button-size + $button-padding * 2) * 4);
   }
 
   .calc-buttons-container {
