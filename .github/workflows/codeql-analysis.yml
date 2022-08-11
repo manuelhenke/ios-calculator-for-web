@@ -14,18 +14,8 @@ name: 'CodeQL'
 on:
   push:
     branches: ['main']
-    paths-ignore:
-      - '.husky/**'
-      - '.gitignore'
-      - 'LICENSE'
-      - 'README.md'
   pull_request:
     branches: ['main']
-    paths-ignore:
-      - '.husky/**'
-      - '.gitignore'
-      - 'LICENSE'
-      - 'README.md'
   schedule:
     - cron: '34 20 * * 3'
 
