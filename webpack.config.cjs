@@ -1,8 +1,7 @@
-const webpack = require('webpack');
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
-/** @type {webpack.Configuration} */
+/** @type {require('webpack').Configuration} */
 module.exports = {
   mode: 'production',
   devtool: false,

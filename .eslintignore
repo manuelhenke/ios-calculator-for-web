@@ -1,5 +1,0 @@
-*.cjs
-dist/
-build/
-coverage/
-**/node_modules/**
