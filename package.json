@@ -25,6 +25,9 @@
   "type": "module",
   "main": "dist/ios-calculator.js",
   "module": "dist/ios-calculator.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "analyze": "cem analyze",
     "build": "webpack",
@@ -44,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-plugin": "^7.18.10",
     "@babel/preset-env": "^7.16.11",
     "@commitlint/config-conventional": "^17.0.3",
     "@custom-elements-manifest/analyzer": "^0.6.3",
@@ -54,15 +58,19 @@
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "eslint": "^8.9.0",
+    "eslint-config-airbnb-babel": "^0.2.2",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-lit": "^1.3.0",
     "eslint-plugin-lit-a11y": "^2.2.2",
     "eslint-plugin-no-only-tests": "^2.4.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.15.0",
+    "eslint-plugin-unicorn": "^43.0.2",
     "eslint-plugin-wc": "^1.3.2",
     "html-loader": "^4.1.0",
     "husky": "^8.0.1",

@@ -2,6 +2,63 @@ import { fixture, expect } from '@open-wc/testing';
 
 import '../dist/ios-calculator.js';
 
+const stepToSelector = (step) => {
+  switch (step) {
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9':
+    case ',':
+      return `[data-digit="${step}"]`;
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+    case '=':
+      return `[data-operand="${step}"]`;
+    case 'C':
+    case 'AC':
+      return '#reset';
+    case '±':
+      return '#plus-minus';
+    case '%':
+      return '#percentage';
+    default:
+      return `#${step}`;
+  }
+};
+
+const testScenario = async (steps = '', expectedSolution = '0') => {
+  const { shadowRoot } = await fixture('<ios-calculator></ios-calculator>');
+  if (!shadowRoot) {
+    throw new Error('Shadow Root not found');
+  }
+
+  for (const step of steps) {
+    const targetSelector = stepToSelector(step);
+    const targetButton = shadowRoot.querySelector(targetSelector);
+
+    if (!targetButton) {
+      throw new Error(`Button with query ${step} not found.`);
+    }
+
+    targetButton.click();
+  }
+
+  const solution = shadowRoot.querySelector('.calc-solution');
+  if (solution) {
+    expect(solution.textContent).to.equal(expectedSolution);
+  } else {
+    throw new Error('Solution html element not found');
+  }
+};
+
 describe('iOS Calculator', () => {
   const scenarios = [
     {
@@ -125,63 +182,6 @@ describe('iOS Calculator', () => {
     },
   ];
 
-  const stepToSelector = (step) => {
-    switch (step) {
-      case '0':
-      case '1':
-      case '2':
-      case '3':
-      case '4':
-      case '5':
-      case '6':
-      case '7':
-      case '8':
-      case '9':
-      case ',':
-        return `[data-digit="${step}"]`;
-      case '+':
-      case '-':
-      case '*':
-      case '/':
-      case '=':
-        return `[data-operand="${step}"]`;
-      case 'C':
-      case 'AC':
-        return `#reset`;
-      case '±':
-        return `#plus-minus`;
-      case '%':
-        return `#percentage`;
-      default:
-        return `#${step}`;
-    }
-  };
-
-  const testScenario = async (steps = '', expectedSolution = '0') => {
-    const { shadowRoot } = await fixture(`<ios-calculator></ios-calculator>`);
-    if (!shadowRoot) {
-      throw new Error('Shadow Root not found');
-    }
-
-    for (const step of steps) {
-      const targetSelector = stepToSelector(step);
-      const targetButton = shadowRoot.querySelector(targetSelector);
-
-      if (!targetButton) {
-        throw new Error(`Button with query ${step} not found.`);
-      }
-
-      targetButton.click();
-    }
-
-    const solution = shadowRoot.querySelector('.calc-solution');
-    if (solution) {
-      expect(solution.textContent).to.equal(expectedSolution);
-    } else {
-      throw new Error('Solution html element not found');
-    }
-  };
-
   scenarios.forEach((scenario, index) => {
     it(scenario.name || `scenario ${index}`, () => {
       testScenario(scenario.steps, scenario.solution);
@@ -189,8 +189,8 @@ describe('iOS Calculator', () => {
   });
 
   it('passes the a11y audit', async () => {
-    const el = await fixture(`<ios-calculator></ios-calculator>`);
+    const element = await fixture('<ios-calculator></ios-calculator>');
 
-    await expect(el).shadowDom.to.be.accessible();
+    expect(element).shadowDom.to.be.accessible();
   });
 });

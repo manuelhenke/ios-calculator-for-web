@@ -4,18 +4,26 @@
     "browser": true
   },
   "parser": "@babel/eslint-parser",
-  "parserOptions": {},
+  "parserOptions": {
+    "requireConfigFile": true,
+    "sourceType": "module"
+  },
   "extends": [
     "airbnb-base",
+    "airbnb-babel",
     "@open-wc",
     "plugin:lit/recommended",
     "plugin:lit-a11y/recommended",
     "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["sonarjs", "html", "no-only-tests"],
-  // add your custom rules here
+  "plugins": ["@babel", "html", "no-only-tests", "no-secrets"],
   "rules": {
-    "no-only-tests/no-only-tests": "error"
+    "import/extensions": ["error", "ignorePackages"],
+    "import/prefer-default-export": "off",
+    "no-only-tests/no-only-tests": "error",
+    "no-secrets/no-secrets": "error",
+    "unicorn/no-array-for-each": "off"
   }
 }

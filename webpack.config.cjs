@@ -1,4 +1,5 @@
-const path = require('path');
+/* eslint-disable import/no-extraneous-dependencies */
+const path = require('node:path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 /** @type {require('webpack').Configuration} */
@@ -6,8 +7,8 @@ module.exports = {
   mode: 'production',
   devtool: false,
   entry: {
-    'ios-calculator': './src/iOSCalculator.js',
-    'ios-calculator.min': './src/iOSCalculator.js',
+    'ios-calculator': './src/ios-calculator.js',
+    'ios-calculator.min': './src/ios-calculator.js',
   },
   optimization: {
     minimize: true,

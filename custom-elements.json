@@ -4,7 +4,7 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "src/iOSCalculator.js",
+      "path": "src/ios-calculator.js",
       "declarations": [
         {
           "kind": "class",
@@ -85,7 +85,8 @@
               "privacy": "private",
               "type": {
                 "text": "HTMLElement[]"
-              }
+              },
+              "default": "[...shadowRoot.querySelectorAll('.calc-button-operand')]"
             },
             {
               "kind": "field",
@@ -93,7 +94,8 @@
               "privacy": "private",
               "type": {
                 "text": "HTMLElement[]"
-              }
+              },
+              "default": "[...shadowRoot.querySelectorAll('.calc-button-digit')]"
             },
             {
               "kind": "method",
@@ -198,7 +200,7 @@
           "name": "iOSCalculator",
           "declaration": {
             "name": "iOSCalculator",
-            "module": "src/iOSCalculator.js"
+            "module": "src/ios-calculator.js"
           }
         },
         {
@@ -206,7 +208,7 @@
           "name": "ios-calculator",
           "declaration": {
             "name": "iOSCalculator",
-            "module": "src/iOSCalculator.js"
+            "module": "src/ios-calculator.js"
           }
         }
       ]

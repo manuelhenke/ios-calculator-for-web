@@ -3,7 +3,11 @@
     "module": "commonjs",
     "target": "es2020",
     "jsx": "preserve",
-    "strictFunctionTypes": true
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "esModuleInterop": true,
+    "baseUrl": "."
   },
+  "include": ["src", "test"],
   "exclude": ["node_modules", "**/node_modules/*", "dist"]
 }

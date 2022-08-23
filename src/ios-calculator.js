@@ -20,30 +20,31 @@ const CHARACTERS = {
 /**
  * @param {HTMLElement} elem
  */
-function addActiveState(elem) {
-  elem.classList.add('active');
+function addActiveState(element) {
+  element.classList.add('active');
 }
 
 /**
  * @param {HTMLElement} elem
  */
-function removeActiveState(elem) {
-  elem.classList.remove('active');
+function removeActiveState(element) {
+  element.classList.remove('active');
 }
 
-function isOperand(str) {
-  return [CHARACTERS.PLUS, CHARACTERS.MINUS, CHARACTERS.DIVIDE, CHARACTERS.MULTIPLY].includes(str);
+function isOperand(char) {
+  return [CHARACTERS.PLUS, CHARACTERS.MINUS, CHARACTERS.DIVIDE, CHARACTERS.MULTIPLY].includes(char);
 }
 
 /**
  * @param {string} str
  * @returns {boolean}
  */
-function endsWithOperand(str) {
-  const lastChar = str.slice(-1);
+function endsWithOperand(string_) {
+  const lastChar = string_.slice(-1);
   return isOperand(lastChar);
 }
 
+// eslint-disable-next-line unicorn/prevent-abbreviations
 export class iOSCalculator extends HTMLElement {
   #currentExpression = '';
 
@@ -79,17 +80,17 @@ export class iOSCalculator extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    shadowRoot.appendChild(sheet.cloneNode(true));
-    shadowRoot.appendChild(template.content.cloneNode(true));
+    shadowRoot.append(sheet.cloneNode(true));
+    shadowRoot.append(template.content.cloneNode(true));
 
     this.#calcSolution = shadowRoot.querySelector('.calc-solution');
 
-    this.#resetButton = shadowRoot.getElementById('reset');
-    this.#plusMinusButton = shadowRoot.getElementById('plus-minus');
-    this.#percentageButton = shadowRoot.getElementById('percentage');
+    this.#resetButton = shadowRoot.querySelector('#reset');
+    this.#plusMinusButton = shadowRoot.querySelector('#plus-minus');
+    this.#percentageButton = shadowRoot.querySelector('#percentage');
 
-    this.#operandButtons = Array.from(shadowRoot.querySelectorAll('.calc-button-operand'));
-    this.#digitButtons = Array.from(shadowRoot.querySelectorAll('.calc-button-digit'));
+    this.#operandButtons = [...shadowRoot.querySelectorAll('.calc-button-operand')];
+    this.#digitButtons = [...shadowRoot.querySelectorAll('.calc-button-digit')];
 
     this.#resetButton.addEventListener('click', this.#onResetClick.bind(this));
     this.#plusMinusButton.addEventListener('click', this.#onPlusMinusClick.bind(this));
@@ -119,7 +120,9 @@ export class iOSCalculator extends HTMLElement {
       // AC
       this.#currentInput = '';
       this.#currentExpression = '';
-      this.#operandButtons.forEach(removeActiveState);
+      this.#operandButtons.forEach((element) => {
+        removeActiveState(element);
+      });
     } else {
       // C
       this.#currentInput = '0';
@@ -216,7 +219,9 @@ export class iOSCalculator extends HTMLElement {
    */
   #onOperandClick(event, operandButton) {
     event.preventDefault();
-    this.#operandButtons.forEach(removeActiveState);
+    this.#operandButtons.forEach((element) => {
+      removeActiveState(element);
+    });
 
     const clickedOperand = operandButton.dataset.operand;
 
@@ -279,9 +284,9 @@ export class iOSCalculator extends HTMLElement {
     try {
       // eslint-disable-next-line no-eval
       return eval(expressionToEvaluate).toString();
-    } catch (err) {
+    } catch (error) {
       // eslint-disable-next-line no-console
-      console.error(err);
+      console.error(error);
       return 'Error';
     }
   }
@@ -290,13 +295,17 @@ export class iOSCalculator extends HTMLElement {
     let integerToDisplay;
 
     if (this.#currentInput.length > 0) {
-      this.#operandButtons.forEach(removeActiveState);
+      this.#operandButtons.forEach((element) => {
+        removeActiveState(element);
+      });
       integerToDisplay = this.#currentInput;
     } else if (this.#currentExpression.length > 0) {
       const expressionToDisplay = this.#currentExpression || '0';
 
       if (!endsWithOperand(expressionToDisplay)) {
-        this.#operandButtons.forEach(removeActiveState);
+        this.#operandButtons.forEach((element) => {
+          removeActiveState(element);
+        });
       }
 
       integerToDisplay = this.#getCurrentSolution();
