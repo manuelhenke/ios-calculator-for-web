@@ -5,6 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 /** @type {require('webpack').Configuration} */
 module.exports = {
   mode: 'production',
+  cache: false,
   devtool: false,
   entry: {
     'ios-calculator': './src/ios-calculator.js',

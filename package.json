@@ -49,6 +49,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@babel/eslint-plugin": "^7.18.10",
     "@babel/preset-env": "^7.16.11",
+    "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@custom-elements-manifest/analyzer": "^0.6.3",
     "@open-wc/eslint-config": "^8.0.2",
