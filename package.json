@@ -23,8 +23,9 @@
     "url": "https://henkebyte.com/"
   },
   "type": "module",
-  "main": "dist/ios-calculator.js",
-  "module": "dist/ios-calculator.js",
+  "main": "src/ios-calculator.js",
+  "module": "src/ios-calculator.js",
+  "browser": "dist/ios-calculator.js",
   "files": [
     "dist"
   ],
