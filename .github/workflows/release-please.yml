@@ -21,7 +21,6 @@ jobs:
         with:
           release-type: node
           package-name: ios-calculator-for-web
-          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Documentation"}]'
 
   publish:
     if: ${{ needs.create-release.outputs.release_created }}
