@@ -1,0 +1,11 @@
+name: Dependabot Automation
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot:
+    uses: manuelhenke/.github/.github/workflows/dependabot-automation.yml@main
