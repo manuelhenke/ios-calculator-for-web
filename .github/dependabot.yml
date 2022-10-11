@@ -23,6 +23,5 @@ updates:
     reviewers:
       - manuelhenke
     commit-message:
-      prefix: fix
-      prefix-development: chore
+      prefix: ci
       include: scope
