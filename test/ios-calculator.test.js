@@ -14,23 +14,29 @@ const stepToSelector = (step) => {
     case '7':
     case '8':
     case '9':
-    case ',':
+    case ',': {
       return `[data-digit="${step}"]`;
+    }
     case '+':
     case '-':
     case '*':
     case '/':
-    case '=':
+    case '=': {
       return `[data-operand="${step}"]`;
+    }
     case 'C':
-    case 'AC':
+    case 'AC': {
       return '#reset';
-    case '±':
+    }
+    case '±': {
       return '#plus-minus';
-    case '%':
+    }
+    case '%': {
       return '#percentage';
-    default:
+    }
+    default: {
       return `#${step}`;
+    }
   }
 };
 
