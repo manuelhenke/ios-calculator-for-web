@@ -145,11 +145,9 @@ export class iOSCalculator extends HTMLElement {
       number = this.#getCurrentSolution();
     }
 
-    if (number.startsWith(CHARACTERS.NEGATIVE)) {
-      this.#currentInput = number.slice(1);
-    } else {
-      this.#currentInput = CHARACTERS.NEGATIVE + number;
-    }
+    this.#currentInput = number.startsWith(CHARACTERS.NEGATIVE)
+      ? number.slice(1)
+      : CHARACTERS.NEGATIVE + number;
 
     this.#displaySolution();
   }
@@ -239,10 +237,7 @@ export class iOSCalculator extends HTMLElement {
       this.#currentExpression = this.#currentExpression.slice(0, -1);
     }
 
-    if (clickedOperand !== CHARACTERS.EQUALS) {
-      this.#currentExpression += clickedOperand;
-      addActiveState(operandButton);
-    } else {
+    if (clickedOperand === CHARACTERS.EQUALS) {
       if (this.#currentExpression.endsWith(')')) {
         // clicking = multiple times in a row
         const latestOperandIndex = this.#getLatestOperandIndex();
@@ -253,6 +248,9 @@ export class iOSCalculator extends HTMLElement {
       }
 
       this.#currentExpression = `(${this.#currentExpression})`;
+    } else {
+      this.#currentExpression += clickedOperand;
+      addActiveState(operandButton);
     }
 
     this.#currentInput = '';
