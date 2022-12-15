@@ -17,18 +17,20 @@ const CHARACTERS = {
   COMMA: ',',
 };
 
+const ACTIVE_CLASS_NAME = 'active';
+
 /**
  * @param {HTMLElement} elem
  */
 function addActiveState(element) {
-  element.classList.add('active');
+  element.classList.add(ACTIVE_CLASS_NAME);
 }
 
 /**
  * @param {HTMLElement} elem
  */
 function removeActiveState(element) {
-  element.classList.remove('active');
+  element.classList.remove(ACTIVE_CLASS_NAME);
 }
 
 function isOperand(char) {
