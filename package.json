@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "analyze": "cem analyze",
-    "build": "webpack",
+    "build": "webpack && yarn analyze --exclude dist",
     "lint": "yarn lint:js && yarn lint:style && yarn lint:prettier",
     "lint:js": "eslint --ext \".js\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --ignore-path .gitignore --check .",
