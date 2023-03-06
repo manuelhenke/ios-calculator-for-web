@@ -1139,9 +1139,9 @@
   integrity sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==
 
 "@custom-elements-manifest/analyzer@^0.6.3":
-  version "0.6.8"
-  resolved "https://registry.yarnpkg.com/@custom-elements-manifest/analyzer/-/analyzer-0.6.8.tgz#7b8b662791b5e0e57666c56480351b6b32bd23a8"
-  integrity sha512-Wy5CiMUq9njT6vbeEPi7Zjm7OcVmL+5zyJXUam5TZe13QVnsn/m3VaJx8aqMecTp1m/pFNCL4QGJpYV/oZYIkg==
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/@custom-elements-manifest/analyzer/-/analyzer-0.6.9.tgz#556224d182334a57bc7040ea84760af803101950"
+  integrity sha512-N6GQtDYf9yiFpf0fpjwQ7rtKlBbt9CDqXGenfrMQlo7RfC5HJVH9ZkrKsNBETiV01WPdvUBJRgag+Tbafb+jXA==
   dependencies:
     "@custom-elements-manifest/find-dependencies" "^0.0.5"
     "@github/catalyst" "^1.6.0"
