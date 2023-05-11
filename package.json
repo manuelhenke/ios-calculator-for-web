@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.16.11",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@custom-elements-manifest/analyzer": "^0.6.3",
+    "@custom-elements-manifest/analyzer": "^0.8.2",
     "@open-wc/eslint-config": "^8.0.2",
     "@open-wc/testing": "^3.0.4",
     "@web/test-runner": "0.15.1",
